@@ -1,0 +1,56 @@
+{
+  "brand": "Jonathan Temam",
+  "tagline": "Vise plus haut.",
+  "brief": "Coach sportif : coaching individuel, small group et préparation physique. L'identité doit exprimer l'exigence, la progression et l'énergie, rester sobre et premium, et se reconnaître sur un t-shirt comme sur un avatar Instagram.",
+  "adjectives": [
+    "exigeant",
+    "dynamique",
+    "précis",
+    "bienveillant"
+  ],
+  "criteria": "Reconnaissable à 16 px, fonctionne en une couleur, se brode et s'imprime, se distingue des codes fitness criards.",
+  "mockups": [
+    "business-card",
+    "tshirt",
+    "social",
+    "app-icon",
+    "website",
+    "tote"
+  ],
+  "nav": [
+    "Coaching",
+    "Programmes",
+    "Contact"
+  ],
+  "brand_color": "#FA4616",
+  "greyscale": false,
+  "designer": "Identité visuelle",
+  "round": 1,
+  "concepts": [
+    {
+      "name": "Monogramme JT",
+      "symbol": "../logo/svg/jt-symbole-noir.svg",
+      "lockup": "../logo/svg/jt-horizontal-noir.svg",
+      "idea": "Les initiales J et T dessinées comme deux lames qui s'élancent à 15° vers le haut.",
+      "rationale": [
+        "Un nom, une direction, une énergie : lisible d'un coup d'œil",
+        "Formes pleines et droites : brodable, gravable, découpable",
+        "L'angle de 15° devient la grammaire de tout le système"
+      ],
+      "stacked": "../logo/svg/jt-vertical-noir.svg",
+      "symbol_on_tile": "../logo/svg/jt-symbole-orange.svg",
+      "stacked_on_tile": "../logo/svg/jt-vertical-accent-sombre.svg",
+      "symbol_on_dark": "../logo/svg/jt-symbole-orange.svg",
+      "lockup_on_dark": "../logo/svg/jt-horizontal-accent-sombre.svg",
+      "stacked_on_dark": "../logo/svg/jt-vertical-accent-sombre.svg"
+    }
+  ],
+  "recommendation": "Monogramme JT en Noir Carbone et Blanc Craie, ponctué d'Orange Impulsion.",
+  "next_steps": [
+    "Validation de la charte graphique",
+    "Production des gabarits réseaux sociaux",
+    "Commande textile et papeterie"
+  ],
+  "final": true,
+  "tile_color": "#111214"
+}

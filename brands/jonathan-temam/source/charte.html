@@ -1,0 +1,924 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<title>Jonathan Temam — Charte graphique</title><style>@font-face { font-family: 'Archivo'; src: url('fonts/Archivo-Variable.woff2') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; font-style: normal; }
+@font-face { font-family: 'Archivo'; src: url('fonts/Archivo-Variable-Italic.woff2') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; font-style: italic; }
+@font-face { font-family: 'Inter'; src: url('fonts/Inter-400.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'Inter'; src: url('fonts/Inter-500.woff2') format('woff2'); font-weight: 500; }
+@font-face { font-family: 'Inter'; src: url('fonts/Inter-600.woff2') format('woff2'); font-weight: 600; }
+@font-face { font-family: 'Inter'; src: url('fonts/Inter-700.woff2') format('woff2'); font-weight: 700; }
+
+:root {
+  --noir: #111214; --craie: #F3F1EC; --orange: #FA4616; --graphite: #2A2C30; --acier: #888B8D;
+  --line: #DCD8CF; --muted: #5d6066;
+  --disp: 'Archivo', Arial, sans-serif; --text: 'Inter', Arial, sans-serif;
+}
+@page { size: 297mm 210mm; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #777; }
+body { font-family: var(--text); color: var(--noir); font-size: 12px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 297mm; height: 210mm; position: relative; overflow: hidden; background: var(--craie); padding: 52px 64px 70px; page-break-after: always; break-after: page; margin: 0 auto; }
+@media screen { .page { margin: 24px auto; box-shadow: 0 8px 30px rgba(0,0,0,.25); } }
+.page.dark { background: var(--noir); color: #fff; }
+b { font-weight: 600; }
+code { font-family: 'JetBrains Mono', monospace; font-size: .92em; background: rgba(0,0,0,.06); padding: 1px 4px; border-radius: 3px; }
+.sym { display: block; }
+
+/* type helpers */
+.kicker { font-family: var(--disp); font-stretch: 125%; font-weight: 600; font-size: 10px; letter-spacing: .28em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.kicker.orange { color: var(--orange); }
+.dark .kicker { color: #9a9da3; }
+.dark .kicker.orange { color: var(--orange); }
+h1, h2, h3, .h1s, .h2s, .signature, .pq, .h-big, .m-h { font-family: var(--disp); font-stretch: 125%; text-transform: uppercase; }
+h2 { font-weight: 800; font-size: 34px; line-height: 1.02; letter-spacing: .005em; }
+h2.big { font-size: 40px; }
+h3 { font-weight: 700; font-size: 15px; letter-spacing: .02em; margin: 12px 0 6px; }
+.head { max-width: 760px; margin-bottom: 22px; }
+.head .intro { margin-top: 12px; font-size: 13px; color: var(--muted); max-width: 640px; }
+.lead { font-size: 15px; line-height: 1.55; margin-bottom: 14px; }
+p { margin-bottom: 10px; }
+.note { font-size: 11px; color: var(--muted); }
+.foot-note { position: absolute; left: 64px; right: 64px; bottom: 74px; font-size: 10.5px; color: var(--muted); }
+.cap-s { font-size: 10px; color: var(--acier); font-weight: 500; }
+.mt { margin-top: 26px; } .mt-s { margin-top: 18px; }
+.o { color: var(--orange); }
+.trait { display: block; }
+
+/* footer */
+.pfoot { position: absolute; left: 64px; right: 64px; bottom: 26px; display: flex; justify-content: space-between; align-items: center; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--acier); font-family: var(--disp); font-stretch: 125%; font-weight: 500; border-top: 1px solid var(--line); padding-top: 10px; }
+.pfoot span:first-child { display: flex; align-items: center; gap: 10px; }
+.pf-sym { width: 26px; height: 13px; color: var(--noir); }
+.pfoot .pn { color: var(--noir); font-weight: 700; }
+
+/* grids */
+.two-col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.grid6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+
+/* cover */
+.cover { padding: 0; }
+.cover-pattern, .div-pattern { position: absolute; inset: 0; }
+.cover-top { position: absolute; top: 56px; left: 70px; }
+.cover-sym { position: absolute; width: 640px; right: 40px; top: 120px; }
+.cover-bottom { position: absolute; left: 70px; bottom: 64px; }
+.cover-bottom h1 { font-weight: 800; font-size: 88px; line-height: .92; letter-spacing: -.005em; margin: 6px 0 22px; }
+.cover-meta { display: flex; gap: 40px; margin-top: 22px; font-size: 11px; color: #9a9da3; letter-spacing: .04em; }
+.back { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 44px; }
+.back img { width: 380px; }
+
+/* divider */
+.divider { padding: 0; }
+.div-num { position: absolute; left: 64px; top: 30px; font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 230px; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px #3a3c42; }
+.div-body { position: absolute; left: 70px; bottom: 90px; max-width: 520px; }
+.div-body h1 { font-weight: 800; font-size: 62px; line-height: .95; margin-bottom: 18px; }
+.div-body p { color: #b9bcc2; font-size: 14px; margin-bottom: 18px; }
+.div-body ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.div-body li { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; border: 1px solid #3a3c42; padding: 5px 10px; color: #d9dbe0; font-family: var(--disp); font-stretch: 125%; }
+.div-sym { position: absolute; width: 420px; right: 70px; top: 150px; }
+
+/* sommaire */
+.toc-wrap { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; height: 100%; align-items: center; }
+.toc-left h2 { margin-bottom: 24px; }
+.toc-row { display: grid; grid-template-columns: 54px 1fr 1.2fr 50px; align-items: baseline; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.toc-n { font-family: var(--disp); font-stretch: 125%; font-weight: 800; color: var(--orange); font-size: 14px; }
+.toc-t { font-family: var(--disp); font-stretch: 125%; font-weight: 700; font-size: 15px; text-transform: uppercase; }
+.toc-s { color: var(--muted); font-size: 11px; }
+.toc-p { text-align: right; font-weight: 600; font-size: 11px; }
+
+/* intro */
+.intro-card { background: #fff; padding: 34px; align-self: start; margin-top: 8px; }
+.steps { list-style: none; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 34px 1fr; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.steps li::before { content: '0' counter(s); font-family: var(--disp); font-stretch: 125%; font-weight: 800; color: var(--orange); grid-row: span 2; }
+.steps b { font-family: var(--disp); font-stretch: 125%; text-transform: uppercase; font-size: 12px; }
+.steps span { color: var(--muted); font-size: 11.5px; }
+
+/* platform */
+.card { background: #fff; padding: 26px; }
+.big-p { font-size: 15.5px; line-height: 1.45; font-weight: 500; margin: 0; }
+.sig-band { background: var(--noir); color: #fff; margin-top: 22px; padding: 22px 30px; display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: center; }
+.sig-band p { color: #c7c9ce; font-size: 12px; margin: 0; }
+.signature { font-weight: 800; font-size: 34px; line-height: 1; }
+.signature.light { color: #fff; font-size: 30px; }
+.grid3.small p { font-size: 11.5px; color: var(--muted); }
+.value { background: #fff; padding: 26px 24px; min-height: 300px; }
+.v-n { font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 44px; color: var(--noir); line-height: 1; margin-bottom: 14px; }
+.value h3 { font-size: 18px; margin-top: 22px; }
+.value p { color: var(--muted); font-size: 12.5px; }
+.adj { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+.adj span { background: var(--noir); color: #fff; padding: 8px 14px; font-family: var(--disp); font-stretch: 125%; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.adj span:first-child { background: var(--orange); color: var(--noir); }
+table { border-collapse: collapse; width: 100%; }
+.tone th, .spec th { text-align: left; font-family: var(--disp); font-stretch: 125%; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 8px 0; border-bottom: 2px solid var(--noir); }
+.tone td, .spec td { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+.tone td:first-child { font-weight: 600; }
+.tone td:last-child { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--orange); }
+.spec td:first-child { font-weight: 600; }
+.rules { list-style: none; margin-bottom: 14px; }
+.rules li { padding: 6px 0 6px 22px; position: relative; font-size: 12.5px; }
+.rules li::before { content: ''; position: absolute; left: 0; top: 13px; width: 13px; height: 3px; background: var(--orange); clip-path: polygon(0 100%, 100% 0, 92% 100%); }
+.rules.small li { font-size: 11.5px; padding: 4px 0 4px 22px; }
+.rules.small li::before { top: 10px; }
+.rules.neg li::before { background: var(--acier); }
+.rules.two { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; margin-top: 18px; }
+.say { padding: 14px 18px; margin-top: 10px; font-size: 13px; background: #fff; border-left: 4px solid var(--noir); }
+.say b { display: block; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 4px; font-family: var(--disp); font-stretch: 125%; }
+.say.do b { color: #18803f; } .say.dont { border-color: var(--orange); color: var(--muted); } .say.dont b { color: var(--orange); }
+
+/* concept */
+.concept { display: grid; grid-template-columns: 1.15fr 1fr; gap: 50px; align-items: center; height: 330px; }
+.concept-hero { padding: 10px 20px; }
+.concept-text .head { margin-bottom: 14px; }
+.readings > div { background: #fff; padding: 20px 22px; }
+.readings svg { width: 100%; height: 110px; }
+.readings h3 { margin-top: 10px; }
+.readings p { font-size: 11.5px; color: var(--muted); margin: 0; }
+
+/* construction */
+.constr { display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; align-items: center; }
+.constr-svg { width: 100%; background: #fff; }
+.dim { font-family: var(--text); font-size: 18px; fill: var(--muted); }
+.legend > div { display: grid; grid-template-columns: 18px 44px 1fr; align-items: baseline; gap: 8px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.legend i { width: 14px; height: 4px; display: block; transform: translateY(-3px); }
+.legend b { font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 15px; }
+.legend span { font-size: 11.5px; color: var(--muted); }
+.legend .note { margin-top: 16px; }
+
+/* versions */
+.versions { display: grid; grid-template-columns: 1.5fr 1fr 1fr; grid-template-rows: 210px 210px; gap: 16px; }
+.v-tile { background: #fff; display: flex; flex-direction: column; }
+.v-tile.wide { grid-column: span 1; grid-row: span 2; }
+.v-tile.dark { background: var(--graphite); color: #fff; }
+.v-art { flex: 1; display: flex; align-items: center; justify-content: center; }
+.v-tile.wide .v-art img { width: 82%; }
+.v-cap { padding: 10px 16px 14px; border-top: 1px solid var(--line); }
+.v-tile.dark .v-cap { border-color: #3a3c42; }
+.v-cap b { display: block; font-family: var(--disp); font-stretch: 125%; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+.v-cap span { font-size: 10.5px; color: var(--muted); }
+.v-tile.dark .v-cap span { color: #b9bcc2; }
+.versions .v-tile:nth-child(5) { grid-column: 2; }
+.versions { grid-template-areas: none; }
+
+/* clear space */
+.cs { grid-template-columns: 1.2fr 1fr; gap: 50px; }
+.cs-art { background: #fff; padding: 40px 30px; display: flex; justify-content: center; margin-bottom: 18px; }
+.cs-zone { position: relative; padding: 26px; outline: 1.5px dashed var(--orange); width: 100%; }
+.cs-zone img { width: 100%; display: block; outline: 1px solid rgba(250,70,22,.35); }
+.x { position: absolute; font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 11px; color: var(--orange); }
+.x-t { top: 5px; left: 50%; } .x-b { bottom: 5px; left: 50%; } .x-l { left: 8px; top: 45%; } .x-r { right: 8px; top: 45%; }
+.cs-x { background: #fff; padding: 16px 20px; margin-bottom: 14px; }
+.xl { font-family: var(--disp); font-weight: 800; font-size: 40px; fill: var(--orange); }
+
+/* colour versions */
+.cvs { gap: 16px 22px; }
+.cv-art { height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.cv-art img { width: 72%; }
+.cv b, .bad span, .photos b, .angle b, .patterns b, .tee b, .acc b { display: block; font-family: var(--disp); font-stretch: 125%; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+.cv span, .photos span, .angle span, .patterns span, .tee span, .acc span { font-size: 10.5px; color: var(--muted); display: block; }
+.cv:nth-child(4) .cv-art { outline: 1px solid var(--line); outline-offset: -1px; }
+
+/* photos */
+.ph { height: 330px; position: relative; margin-bottom: 10px; overflow: hidden; }
+.ph-dark { background: radial-gradient(120% 90% at 85% 70%, #4a4d55 0%, #23252a 45%, #0d0e10 80%); }
+.ph-dark::after { content: ''; position: absolute; right: 30px; bottom: 0; width: 120px; height: 230px; background: linear-gradient(180deg, #2f3238, #1a1b1f); clip-path: polygon(40% 0, 70% 0, 75% 25%, 100% 45%, 90% 100%, 10% 100%, 0 45%, 30% 25%); opacity: .9; }
+.ph-light { background: linear-gradient(170deg, #e7e9ec 0%, #cfd3d8 55%, #9aa0a8 100%); }
+.ph-light::after { content: ''; position: absolute; right: 50px; bottom: 0; width: 110px; height: 220px; background: #6b7078; clip-path: polygon(40% 0, 70% 0, 75% 25%, 100% 45%, 90% 100%, 10% 100%, 0 45%, 30% 25%); }
+.ph-busy { background: repeating-linear-gradient(105deg, #8b3a1d 0 18px, #3d3f45 18px 30px, #c7b98f 30px 44px, #22252b 44px 60px); }
+.ph-logo { position: absolute; width: 58%; }
+.ph-logo.tl { left: 26px; top: 26px; } .ph-logo.bl { left: 26px; bottom: 26px; }
+.cartouche { position: absolute; left: 26px; bottom: 26px; background: var(--noir); padding: 20px; width: 130px; }
+.cartouche img { width: 100%; display: block; }
+
+/* misuse */
+.bads { gap: 18px 20px; }
+.bad-art { height: 150px; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 8px; overflow: hidden; }
+.bad-art img { display: block; }
+.cross { position: absolute; top: 8px; right: 10px; width: 24px; height: 24px; border-radius: 50%; background: var(--orange); color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+/* palette */
+.swatches { display: grid; grid-template-columns: 1.3fr 1.3fr 1.3fr 1fr 1fr; gap: 16px; margin-top: 6px; }
+.sw-c { height: 260px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; }
+.swatch:nth-child(2) .sw-c { outline: 1px solid var(--line); outline-offset: -1px; background-clip: padding-box; }
+.sw-c b { font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 16px; text-transform: uppercase; line-height: 1.1; }
+.sw-role { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; font-family: var(--disp); font-stretch: 125%; opacity: .75; }
+.swatch dl { display: grid; grid-template-columns: 56px 1fr; padding-top: 10px; font-size: 11px; row-gap: 3px; }
+.swatch dt { font-family: var(--disp); font-stretch: 125%; font-size: 9px; letter-spacing: .14em; color: var(--muted); padding-top: 2px; }
+.swatch dd small { color: var(--muted); font-size: 9.5px; }
+.swatch .sw-c[style*="F3F1EC"] { background: #FBFAF7 !important; }
+
+/* proportions */
+.ratio { display: flex; height: 150px; margin: 8px 0 22px; }
+.ratio div { padding: 14px; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; font-family: var(--disp); font-stretch: 125%; display: flex; flex-direction: column; justify-content: space-between; font-weight: 600; }
+.ratio div:nth-child(2) { background: #fff !important; }
+.ratio b { font-size: 26px; font-weight: 800; letter-spacing: 0; }
+.ratio div:last-child b { font-size: 12px; }
+.ct { height: 160px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between; }
+.ct-a { font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 50px; line-height: 1; }
+.ct-l { font-size: 10px; line-height: 1.4; }
+
+/* type */
+.spec-type { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; }
+.spec-type.small { grid-template-columns: 130px 1fr; gap: 24px; }
+.aa { font-size: 220px; line-height: .9; font-weight: 800; }
+.spec-type.small .aa { font-size: 110px; font-weight: 600; }
+.archivo { font-family: var(--disp); font-stretch: 125%; }
+.inter { font-family: var(--text); }
+.alpha { font-size: 24px; line-height: 1.35; font-weight: 600; margin-bottom: 24px; letter-spacing: .02em; }
+.spec-type.small .alpha { font-size: 17px; margin-bottom: 12px; }
+.weights { display: flex; gap: 28px; font-size: 18px; text-transform: uppercase; margin-bottom: 22px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.hier { background: #fff; padding: 8px 26px; }
+.h-row { display: grid; grid-template-columns: 170px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: center; }
+.h-row:last-child { border: none; }
+.h-l { font-size: 11px; font-weight: 600; line-height: 1.3; }
+.h-l small { display: block; font-weight: 400; color: var(--muted); font-size: 9.5px; }
+.h-row .kicker { margin: 0; }
+.h1s { font-weight: 800; font-size: 30px; line-height: 1; }
+.h2s { font-weight: 700; font-size: 18px; line-height: 1.1; }
+.h2s.light { color: #fff; font-size: 26px; font-weight: 800; }
+.kpi { font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-style: italic; font-size: 34px; line-height: 1; color: var(--orange); }
+.body-s { font-size: 11.5px; }
+
+/* graphic elements */
+.ang-demo, .trait-demo, .badge-demo { height: 250px; position: relative; overflow: hidden; margin-bottom: 12px; }
+.ang-demo { background: var(--noir); }
+.ang-cut { position: absolute; inset: 0; background: var(--orange); clip-path: polygon(0 62%, 100% 35%, 100% 100%, 0 100%); }
+.ang-txt { position: absolute; left: 24px; top: 24px; font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 64px; color: #fff; }
+.trait-demo { background: #fff; padding: 50px 34px; }
+.t-title { font-family: var(--disp); font-stretch: 125%; text-transform: uppercase; font-weight: 800; font-size: 34px; line-height: 1; margin-bottom: 14px; }
+.badge-demo { background: var(--graphite); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 34px; gap: 12px; }
+.badge { background: var(--noir); color: #fff; padding: 14px 20px; clip-path: polygon(0 0, 100% 0, 100% 100%, 10px 100%); }
+.badge span { display: block; font-family: var(--disp); font-stretch: 125%; font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--orange); }
+.badge b { font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 40px; font-style: italic; }
+.pat { height: 250px; margin-bottom: 12px; overflow: hidden; }
+.pat svg { width: 100%; height: 100%; }
+.icons { display: grid; grid-template-columns: repeat(8, 1fr); gap: 14px; }
+.icons.small { grid-template-columns: repeat(4, 1fr); }
+.ic-box { background: #fff; height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; color: var(--noir); }
+.ic-box.dark { background: var(--noir); height: 90px; }
+.ic span { font-family: var(--disp); font-stretch: 125%; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; }
+
+/* photo direction (illustrative gradients) */
+.pd-img.a { background: radial-gradient(70% 90% at 70% 40%, #5b5f68 0%, #2a2c31 40%, #0d0e10 85%); }
+.pd-img.b { background: linear-gradient(115deg, #0e0f11 0%, #30333a 55%, #7d828b 100%); }
+.photo-dir { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+.pd-main { position: relative; height: 420px; overflow: hidden; }
+.pd-main .pd-img { position: absolute; inset: 0; }
+.pd-main .pd-img::after { content: ''; position: absolute; right: 120px; top: 60px; width: 180px; height: 360px; background: linear-gradient(160deg, #3d4048, #15161a); clip-path: polygon(45% 0, 62% 0, 66% 14%, 92% 30%, 100% 52%, 80% 50%, 76% 100%, 56% 100%, 50% 62%, 40% 100%, 20% 100%, 24% 50%, 2% 46%, 30% 26%, 40% 14%); }
+.pd-cut { position: absolute; inset: 0; background: var(--orange); clip-path: polygon(0 80%, 100% 54%, 100% 60%, 0 86%); }
+.pd-txt { position: absolute; left: 30px; top: 30px; }
+.pd-logo { position: absolute; right: 26px; bottom: 26px; width: 90px; }
+
+/* stationery */
+.stationery { display: grid; grid-template-columns: 1.15fr 0.9fr 0.9fr; gap: 36px; align-items: start; }
+.bc-stack { position: relative; }
+.bc { width: 340px; height: 220px; position: relative; box-shadow: 0 10px 24px rgba(0,0,0,.18); }
+.bc-front { background: var(--noir); display: flex; align-items: center; justify-content: center; }
+.bc-sym { width: 170px; }
+.bc-tag { position: absolute; left: 22px; bottom: 18px; font-family: var(--disp); font-stretch: 125%; font-weight: 700; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--orange); }
+.bc-back { background: #fff; margin: -40px 0 14px 40px; padding: 24px; }
+.bc-logo { width: 150px; margin-bottom: 30px; display: block; }
+.bc-name { font-family: var(--disp); font-stretch: 125%; font-weight: 800; text-transform: uppercase; font-size: 13px; }
+.bc-role { font-size: 9px; color: var(--muted); margin-bottom: 8px; }
+.bc-info { font-size: 9px; margin-top: 8px; line-height: 1.5; }
+.letter { background: #fff; height: 470px; padding: 26px; position: relative; box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+.lt-head img { width: 150px; }
+.lt-to { font-size: 8px; margin: 40px 0 0 55%; line-height: 1.5; }
+.lt-obj { font-size: 8px; font-weight: 600; margin: 26px 0 14px; }
+.lt-line { height: 5px; background: #ecebe7; margin-bottom: 9px; }
+.lt-line.short { width: 60%; }
+.lt-foot { position: absolute; left: 26px; right: 26px; bottom: 20px; display: flex; align-items: center; gap: 8px; font-size: 6px; color: var(--muted); }
+.mail-box { background: #fff; padding: 20px; display: flex; gap: 16px; align-items: center; border-left: 3px solid var(--orange); }
+.mail-sym { width: 70px; padding-right: 16px; border-right: 1px solid var(--line); }
+.mail-box b { display: block; font-family: var(--disp); font-stretch: 125%; text-transform: uppercase; font-size: 12px; }
+.mail-box span { display: block; font-size: 10px; color: var(--muted); }
+.mail-box span.o { color: var(--orange); }
+.mail { align-self: start; }
+
+/* social */
+.social { display: grid; grid-template-columns: 250px 1fr 165px; gap: 34px; align-items: start; }
+.phone { background: #000; border-radius: 34px; padding: 10px; height: 520px; }
+.ph-screen { background: #fff; border-radius: 26px; height: 100%; overflow: hidden; padding: 30px 0 0; }
+.ig-head { display: flex; align-items: center; gap: 12px; padding: 0 12px; }
+.ig-av { width: 56px; height: 56px; border-radius: 50%; }
+.ig-stats { text-align: center; font-size: 8px; line-height: 1.2; }
+.ig-stats b { display: block; font-size: 11px; }
+.ig-bio { font-size: 8.5px; padding: 10px 12px; line-height: 1.4; }
+.ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.ig-grid .post { width: auto; height: 76px; padding: 6px; }
+.ig-grid .pq { font-size: 6px; } .ig-grid .pq.sm { font-size: 5.5px; }
+.ig-grid .p-k, .ig-grid .p-s, .ig-grid .trait { display: none; }
+.ig-grid .pkpi { font-size: 16px; margin-top: 8px; }
+.ig-grid .p-sym { width: 16px; right: 5px; bottom: 5px; }
+.ig-grid .p-sym.big { width: 44px; }
+.post { position: relative; width: 100%; aspect-ratio: 1 / 1; padding: 18px; overflow: hidden; }
+.post > svg:first-child:not(.sym) { position: absolute; inset: 0; width: 100%; height: 100%; }
+.post-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.pq { font-weight: 800; font-size: 17px; line-height: 1; margin-bottom: 10px; position: relative; }
+.pq.sm { font-size: 14px; }
+.pq.light { color: #fff; }
+.p-k { font-family: var(--disp); font-stretch: 125%; font-size: 7px; letter-spacing: .24em; text-transform: uppercase; margin-bottom: 8px; font-weight: 600; }
+.p-s { font-size: 8px; line-height: 1.4; }
+.pkpi { font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-style: italic; font-size: 54px; line-height: .9; margin: 14px 0 8px; }
+.pkpi small { font-size: 18px; }
+.p-sym { position: absolute; width: 34px; right: 12px; bottom: 12px; }
+.p-sym.big { width: 70%; left: 15%; top: 32%; right: auto; bottom: auto; }
+.p-cut { position: absolute; inset: 0; background: var(--orange); clip-path: polygon(0 84%, 100% 60%, 100% 66%, 0 90%); }
+.post-legend { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 8px 0 18px; font-size: 10px; color: var(--muted); }
+.post-legend b { display: block; color: var(--noir); font-family: var(--disp); font-stretch: 125%; text-transform: uppercase; font-size: 10px; }
+.story { position: relative; height: 293px; width: 165px; overflow: hidden; margin-top: 0; }
+.st-img { position: absolute; inset: 0; }
+.st-cut { position: absolute; inset: 0; background: var(--orange); clip-path: polygon(0 74%, 100% 64%, 100% 100%, 0 100%); }
+.st-txt { position: absolute; left: 14px; top: 18px; color: #fff; }
+.st-list { font-size: 9px; color: #fff; line-height: 1.6; margin-top: 4px; }
+.st-logo { position: absolute; right: 12px; bottom: 14px; width: 46px; filter: brightness(0); }
+
+/* textile & accessories */
+.textile, .acc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+.tee svg, .acc svg { width: 100%; height: 300px; background: #fff; padding: 20px; margin-bottom: 10px; }
+.tee-t { font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 11px; fill: #fff; letter-spacing: .08em; }
+.rollup .ru { position: relative; height: 300px; background: var(--noir); width: 140px; margin: 0 auto 10px; overflow: hidden; }
+.rollup { background: #fff; padding: 0; }
+.rollup b, .rollup > span { padding: 0 4px; }
+.ru > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ru-in { position: absolute; inset: 0; padding: 24px 14px; display: flex; flex-direction: column; gap: 14px; color: #fff; }
+.ru-in img { width: 100%; }
+.ru-t { font-family: var(--disp); font-stretch: 125%; font-weight: 800; text-transform: uppercase; font-size: 13px; line-height: 1; margin-top: 40px; }
+.ru-b { margin-top: auto; background: var(--orange); color: var(--noir); font-family: var(--disp); font-stretch: 125%; font-weight: 700; font-size: 9px; text-transform: uppercase; padding: 7px 10px; text-align: center; }
+.acc .rollup { background: transparent; }
+.acc .rollup .ru { box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+.acc .rollup { padding-top: 0; }
+
+/* web */
+.web { display: grid; grid-template-columns: 1fr 200px; gap: 36px; align-items: start; }
+.browser { background: #fff; box-shadow: 0 12px 30px rgba(0,0,0,.18); }
+.br-bar { height: 26px; background: #e6e4df; display: flex; align-items: center; gap: 6px; padding: 0 10px; }
+.br-bar i { width: 9px; height: 9px; border-radius: 50%; background: #c9c6be; }
+.br-bar span { margin-left: 16px; background: #fff; font-size: 9px; padding: 2px 30px; border-radius: 4px; color: var(--muted); }
+.site { position: relative; height: 430px; background: var(--noir); color: #fff; overflow: hidden; }
+.site-pattern { position: absolute; inset: 0; }
+.nav { position: relative; display: flex; align-items: center; padding: 18px 30px; gap: 30px; }
+.nav img { width: 170px; }
+.nav-l { display: flex; gap: 22px; margin-left: auto; font-size: 10px; color: #c7c9ce; }
+.btn { display: inline-block; background: var(--orange); color: var(--noir); font-family: var(--disp); font-stretch: 125%; font-weight: 700; font-size: 9px; text-transform: uppercase; letter-spacing: .08em; padding: 8px 14px; }
+.btn.big { font-size: 11px; padding: 12px 20px; margin-top: 8px; }
+.hero { position: relative; padding: 40px 30px; max-width: 420px; }
+.h-big { font-weight: 800; font-size: 58px; line-height: .92; margin-bottom: 18px; }
+.hero p { color: #b9bcc2; font-size: 12px; }
+.site-sym { position: absolute; width: 380px; right: 30px; top: 110px; }
+.site-strip { position: absolute; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #2c2e33; }
+.site-strip div { display: flex; align-items: center; gap: 10px; padding: 12px 30px; font-family: var(--disp); font-stretch: 125%; font-size: 9px; text-transform: uppercase; letter-spacing: .12em; border-right: 1px solid #2c2e33; }
+.mobile { display: flex; flex-direction: column; gap: 18px; }
+.m-screen { background: var(--noir); color: #fff; border: 8px solid #000; border-radius: 26px; height: 400px; padding: 18px 16px; display: flex; flex-direction: column; gap: 10px; }
+.m-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.m-nav img { width: 40px; }
+.kicker.sm { font-size: 8px; margin: 0; }
+.m-h { font-weight: 800; font-size: 19px; line-height: 1; }
+.m-card { background: var(--graphite); padding: 12px; margin-top: auto; }
+.m-card b { font-family: var(--disp); font-stretch: 125%; font-style: italic; font-weight: 800; font-size: 28px; color: var(--orange); display: block; line-height: 1; }
+.m-card span { font-size: 8px; color: #b9bcc2; }
+.m-screen .btn { text-align: center; }
+.app-icons { display: flex; align-items: flex-end; gap: 14px; }
+.app-icons img { width: 64px; border-radius: 14px; }
+.app-icons img.fav { width: 48px; border-radius: 4px; image-rendering: pixelated; }
+.app-icons img.fav.s { width: 32px; }
+
+/* motion */
+.motion { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.mf-art { background: var(--noir); height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 10px; padding: 16px; gap: 8px; }
+.mf-art svg { width: 100%; }
+.mf-wm { width: 80%; }
+.mf b { display: block; font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 14px; color: var(--orange); }
+.mf span { font-size: 11px; color: var(--muted); }
+
+/* files */
+.tree { background: var(--noir); color: #d9dbe0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; line-height: 1.6; padding: 24px 26px; white-space: pre; }
+.contact { background: #fff; padding: 20px; margin-top: 18px; border-left: 4px solid var(--orange); }
+.contact b { display: block; font-family: var(--disp); font-stretch: 125%; text-transform: uppercase; }
+.contact span { display: block; font-size: 11px; }
+
+/* ---- round 2 fixes ---- */
+.kit-band { position: absolute; left: 64px; right: 64px; bottom: 84px; background: var(--noir); color: #fff; display: grid; grid-template-columns: repeat(5, 1fr); padding: 20px 28px; }
+.kit-band div { display: flex; align-items: baseline; gap: 10px; border-right: 1px solid #2c2e33; padding-left: 14px; }
+.kit-band div:last-child { border: none; }
+.kit-band b { font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 30px; color: var(--orange); }
+.kit-band span { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; font-family: var(--disp); font-stretch: 125%; color: #c7c9ce; }
+.toc-left h2 { font-size: 32px; }
+.card { min-height: 180px; }
+.sig-band { margin-top: 26px; padding: 28px 34px; }
+.grid3.small { margin-top: 30px; }
+.value { min-height: 400px; display: flex; flex-direction: column; }
+.v-n { font-size: 64px; }
+.value p { font-size: 13.5px; }
+.channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); }
+.channels p { font-size: 12px; margin: 0; }
+.readings svg { height: 120px; }
+/* versions grid */
+.versions { grid-template-columns: 1.35fr 1fr 1fr; grid-template-rows: 215px 215px; }
+.v-tile.wide { grid-row: 1 / span 2; grid-column: 1; }
+.versions .v-tile:nth-child(5) { grid-column: auto; }
+.versions + .foot-note { position: static; margin-top: 14px; }
+.cs-art { padding: 80px 34px; }
+.bad-art { background: #fff; }
+.ct[style*="background:#F3F1EC"] { background: #fff !important; }
+.sw-c { height: 330px; }
+.spec-type { grid-template-columns: 380px 1fr; }
+.aa { font-size: 180px; }
+.ang-demo, .trait-demo, .badge-demo, .pat { height: 330px; }
+.trait-demo { padding-top: 100px; }
+.pat { outline: 1px solid var(--line); outline-offset: -1px; }
+.ic-box { height: 150px; }
+.ph-dark::after, .ph-light::after, .pd-main .pd-img::after { display: none; }
+.ph-dark { background: radial-gradient(60% 70% at 78% 62%, #6a6e77 0%, #2c2e33 45%, #0d0e10 85%); }
+.ph-light { background: radial-gradient(70% 80% at 30% 30%, #ffffff 0%, #dfe2e6 50%, #a9aeb6 100%); }
+.pd-img.a { background: radial-gradient(55% 75% at 72% 38%, #767a83 0%, #33363c 38%, #0d0e10 82%); }
+.ph::before { content: 'Visuel d\'illustration'; position: absolute; right: 12px; top: 10px; font-size: 8px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.55); font-family: var(--disp); font-stretch: 125%; z-index: 1; }
+.ph-light::before { color: rgba(0,0,0,.45); }
+.ph-busy::before { color: #fff; }
+/* stationery */
+.bc { width: 300px; height: 194px; }
+.bc-back { margin: 16px 0 12px; padding: 26px; display: flex; flex-direction: column; justify-content: flex-end; }
+.bc-sym { width: 150px; }
+.bc-name { font-size: 15px; }
+.bc-role { font-size: 9.5px; }
+/* social */
+.pq { font-size: 15px; }
+.post-row .post:nth-child(2) .pq { font-size: 13px; }
+.phone { height: 480px; }
+.ig-grid .post { height: 70px; }
+/* accessories */
+.acc svg { height: 360px; }
+.ru-tile { background: #fff; height: 360px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+.rollup .ru { width: 124px; height: 320px; margin: 0; box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+.ru > svg { padding: 0; height: 100% !important; background: none !important; margin: 0 !important; }
+.ru-in { padding: 22px 12px 14px; gap: 10px; min-width: 0; }
+.ru-in img { width: 100%; max-width: 100%; display: block; }
+.ru-sym { width: 70%; height: auto !important; padding: 0 !important; background: none !important; margin: 10px 0 0 !important; }
+.ru-in .trait { height: 4px !important; padding: 0 !important; background: none !important; margin: 0 !important; width: 80px !important; }
+.ru-t { margin-top: 18px; font-size: 11px; }
+.acc .rollup { background: transparent; }
+/* web */
+.site { height: 460px; }
+.hero { padding: 26px 30px; }
+.h-big { font-size: 50px; margin-bottom: 14px; }
+.hero p { max-width: 330px; }
+/* dark footers */
+.dark .pfoot { border-color: #2c2e33; }
+.dark .pf-sym { color: #fff; }
+
+/* ---- round 3 ---- */
+.value { min-height: 340px; }
+.alpha { font-size: 28px; }
+.sample-line { position: absolute; left: 64px; right: 64px; bottom: 90px; font-family: var(--disp); font-stretch: 125%; font-weight: 800; font-size: 64px; text-transform: uppercase; line-height: 1; border-top: 1px solid var(--line); padding-top: 22px; display: flex; justify-content: space-between; align-items: baseline; }
+.sample-line span { font-style: italic; color: var(--orange); font-size: 34px; }
+.ang-demo, .trait-demo, .badge-demo { height: 380px; }
+.trait-demo { padding-top: 130px; }
+.badge-demo { padding: 34px 40px; }
+.phone { height: 540px; }
+.ig-grid .post { height: 74px; }
+.highlights { display: flex; gap: 22px; }
+.highlights div { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.hl { width: 62px; height: 62px; border-radius: 50%; background: var(--noir); display: flex; align-items: center; justify-content: center; outline: 2px solid var(--line); outline-offset: 3px; }
+.highlights small { font-size: 9.5px; font-weight: 500; }
+.acc svg { height: 430px; }
+.ru-tile { height: 430px; }
+.rollup .ru { height: 380px; width: 148px; }
+.ru-t { font-size: 13px; margin-top: 30px; }
+.spec-type { grid-template-columns: 340px 1fr; }
+.alpha { font-size: 23px; }
+.sample-line { font-size: 54px; white-space: nowrap; }
+.sample-line span { font-size: 26px; }
+</style></head><body><section class="page cover dark" id="p1">
+<div class="cover-pattern"><svg width="1123" height="794" viewBox="0 0 1123 794" preserveAspectRatio="xMidYMid slice"><defs><pattern id="cp" width="180.0" height="48.0" patternUnits="userSpaceOnUse"><path d="M0 14.0 L120.0 -18.0 L112.0 2.0 Z" fill="#ffffff"/><path d="M90.0 38.0 L210.0 6.0 L202.0 26.0 Z" fill="#ffffff"/><path d="M-90.0 38.0 L30.0 6.0 L22.0 26.0 Z" fill="#ffffff"/><path d="M180.0 14.0 L300.0 -18.0 L292.0 2.0 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#cp)" opacity="0.045"/></svg></div>
+<div class="cover-top"><img src="../logo/svg/jt-logotype-blanc.svg" style="height:34px"></div>
+<svg class="sym cover-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FFFFFF" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>
+<div class="cover-bottom">
+  <div class="kicker orange">Identité visuelle · Version 1.0</div>
+  <h1>Charte<br>graphique</h1>
+  <svg class="trait" width="420" height="12" viewBox="0 0 420 12"><path fill="#FA4616" d="M0 12 L420 0 L413.7 12 Z"/></svg>
+  <div class="cover-meta"><span>Octobre 2026</span><span>Document de référence — usage interne &amp; prestataires</span></div>
+</div>
+</section><section class="page  " id="p2">
+<div class="toc-wrap">
+  <div class="toc-left">
+    <div class="kicker">Sommaire</div>
+    <h2>Tout ce qu'il faut pour faire vivre la marque.</h2>
+    <svg class="trait" width="260" height="9" viewBox="0 0 260 9"><path fill="#FA4616" d="M0 9 L260 0 L256.1 9 Z"/></svg>
+  </div>
+  <div class="toc-list"><div class="toc-row"><span class="toc-n">01</span><span class="toc-t">Plateforme de marque</span><span class="toc-s">Mission, valeurs, personnalité, ton</span><span class="toc-p">p. 04</span></div><div class="toc-row"><span class="toc-n">02</span><span class="toc-t">Logo</span><span class="toc-s">Concept, construction, versions, règles</span><span class="toc-p">p. 08</span></div><div class="toc-row"><span class="toc-n">03</span><span class="toc-t">Couleurs</span><span class="toc-s">Palette, codes, proportions, contrastes</span><span class="toc-p">p. 16</span></div><div class="toc-row"><span class="toc-n">04</span><span class="toc-t">Typographie</span><span class="toc-s">Familles, hiérarchie, usages</span><span class="toc-p">p. 19</span></div><div class="toc-row"><span class="toc-n">05</span><span class="toc-t">Éléments graphiques</span><span class="toc-s">Angle, trait, motif, pictos, photo</span><span class="toc-p">p. 22</span></div><div class="toc-row"><span class="toc-n">06</span><span class="toc-t">Applications</span><span class="toc-s">Papeterie, social, textile, web, motion</span><span class="toc-p">p. 27</span></div><div class="toc-row"><span class="toc-n">07</span><span class="toc-t">Fichiers & contacts</span><span class="toc-s">Livrables et nomenclature</span><span class="toc-p">p. 34</span></div></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Sommaire</span><span class="pn">02</span></div></section><section class="page  " id="p3">
+<div class="two-col">
+  <div>
+    <div class="head"><div class="kicker">Introduction</div><h2>Une identité taillée<br>pour avancer.</h2></div>
+    <p class="lead">Ce document rassemble les règles qui font vivre l'identité visuelle de <b>Jonathan Temam, coach sportif</b>.
+    Il s'adresse à toutes les personnes qui produisent un support pour la marque : Jonathan lui-même, graphistes,
+    imprimeurs, brodeurs, développeurs web, partenaires et salles.</p>
+    <p>Une marque forte ne naît pas d'un logo seul, mais de la <b>répétition cohérente</b> des mêmes signes : un symbole,
+    deux couleurs fortes, deux typographies, un angle. Chaque post, chaque t-shirt, chaque carte de visite construit la
+    même image — et la rend plus reconnaissable que la précédente.</p>
+    <p>Les règles sont pensées pour être simples à appliquer, y compris dans Canva. En cas de doute,
+    privilégiez toujours la version la plus sobre : noir, blanc, et beaucoup d'espace.</p>
+  </div>
+  <div class="intro-card">
+    <div class="kicker">Comment utiliser ce guide</div>
+    <ol class="steps">
+      <li><b>Comprendre</b><span>La plateforme de marque (01) explique ce que la marque dit et comment elle le dit.</span></li>
+      <li><b>Choisir le bon fichier</b><span>Le logo (02) et la liste des fichiers (07) indiquent quelle version utiliser, où.</span></li>
+      <li><b>Composer</b><span>Couleurs (03), typographie (04) et éléments graphiques (05) forment la boîte à outils.</span></li>
+      <li><b>S'inspirer</b><span>Les applications (06) montrent le système en situation réelle.</span></li>
+    </ol>
+  </div>
+</div>
+<div class="kit-band">
+  <div><b>1</b><span>symbole</span></div><div><b>4</b><span>versions du logo</span></div>
+  <div><b>5</b><span>couleurs</span></div><div><b>2</b><span>typographies</span></div><div><b>15°</b><span>un angle de marque</span></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Introduction</span><span class="pn">03</span></div></section><section class="page divider dark" id="p4">
+<div class="div-pattern"><svg width="1123" height="794" viewBox="0 0 1123 794" preserveAspectRatio="xMidYMid slice"><defs><pattern id="dp01" width="180.0" height="48.0" patternUnits="userSpaceOnUse"><path d="M0 14.0 L120.0 -18.0 L112.0 2.0 Z" fill="#ffffff"/><path d="M90.0 38.0 L210.0 6.0 L202.0 26.0 Z" fill="#ffffff"/><path d="M-90.0 38.0 L30.0 6.0 L22.0 26.0 Z" fill="#ffffff"/><path d="M180.0 14.0 L300.0 -18.0 L292.0 2.0 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#dp01)" opacity="0.05"/></svg></div>
+<div class="div-num">01</div>
+<div class="div-body"><h1>Plateforme<br>de marque</h1><p>Ce que la marque défend, et la manière dont elle s'exprime.</p><ul><li>Mission, vision, promesse</li><li>Valeurs</li><li>Personnalité & ton de voix</li></ul></div>
+<svg class="sym div-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>
+<div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span></span><span class="pn">04</span></div></section><section class="page  " id="p5">
+<div class="head"><div class="kicker">01 — Plateforme de marque</div><h2>Le cap.</h2></div>
+<div class="grid3 mt">
+  <div class="card"><div class="kicker orange">Mission</div><p class="big-p">Amener chaque personne accompagnée
+  au-delà de ce qu'elle pensait possible — avec méthode, exigence et bienveillance.</p></div>
+  <div class="card"><div class="kicker orange">Vision</div><p class="big-p">Faire du sport un réflexe durable,
+  pas une résolution de janvier. Un coaching qui transforme le corps <i>et</i> les habitudes.</p></div>
+  <div class="card"><div class="kicker orange">Promesse</div><p class="big-p">Un cap clair, un suivi précis,
+  des progrès mesurables à chaque étape.</p></div>
+</div>
+<div class="sig-band">
+  <div><div class="kicker">Signature de marque</div><div class="signature">Vise plus haut.</div></div>
+  <p>Trois mots qui prolongent le symbole : une trajectoire qui monte. Elle s'emploie en fin de message,
+  en accroche de campagne ou sous le logo dans les grands formats — jamais modifiée, jamais traduite.</p>
+</div>
+<div class="grid3 small mt-s">
+  <div><div class="kicker">Publics</div><p>Particuliers actifs de 25 à 55 ans (remise en forme, perte de poids, force) ·
+  sportifs amateurs préparant un objectif · entreprises et petits groupes.</p></div>
+  <div><div class="kicker">Offre</div><p>Coaching individuel · small group training · préparation physique ·
+  programmes et suivi à distance.</p></div>
+  <div><div class="kicker">Positionnement</div><p>Premium mais accessible : l'exigence d'un préparateur physique,
+  la proximité d'un coach personnel.</p></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Plateforme de marque</span><span class="pn">05</span></div></section><section class="page  " id="p6"><div class="head"><div class="kicker">01 — Plateforme de marque</div><h2>Quatre valeurs.</h2><p class="intro">Elles guident les décisions — du choix d'une photo à la manière de répondre à un message.</p></div>
+<div class="grid4 mt"><div class="value"><div class="v-n">01</div><svg class="trait" width="120" height="6" viewBox="0 0 120 6"><path fill="#FA4616" d="M0 6 L120 0 L118.2 6 Z"/></svg><h3>Exigence</h3><p>Chaque séance a un objectif. Chaque exercice a une raison. Le travail bien fait, sans raccourci.</p></div><div class="value"><div class="v-n">02</div><svg class="trait" width="120" height="6" viewBox="0 0 120 6"><path fill="#FA4616" d="M0 6 L120 0 L118.2 6 Z"/></svg><h3>Progression</h3><p>On mesure, on ajuste, on avance. Le progrès se voit, se chiffre et se célèbre.</p></div><div class="value"><div class="v-n">03</div><svg class="trait" width="120" height="6" viewBox="0 0 120 6"><path fill="#FA4616" d="M0 6 L120 0 L118.2 6 Z"/></svg><h3>Engagement</h3><p>Présent, ponctuel, impliqué. Le coach s'engage autant que la personne accompagnée.</p></div><div class="value"><div class="v-n">04</div><svg class="trait" width="120" height="6" viewBox="0 0 120 6"><path fill="#FA4616" d="M0 6 L120 0 L118.2 6 Z"/></svg><h3>Proximité</h3><p>Écouter avant de prescrire. Un accompagnement humain, adapté à la vie réelle de chacun.</p></div></div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Valeurs</span><span class="pn">06</span></div></section><section class="page  " id="p7"><div class="head"><div class="kicker">01 — Plateforme de marque</div><h2>Personnalité & ton de voix.</h2></div>
+<div class="two-col mt">
+  <div>
+    <div class="adj"><span>Direct</span><span>Motivant</span><span>Précis</span><span>Bienveillant</span><span>Énergique</span></div>
+    <table class="tone">
+      <tr><th>La marque est…</th><th>…mais n'est pas</th></tr>
+      <tr><td>Directe</td><td>Brutale</td></tr>
+      <tr><td>Motivante</td><td>Culpabilisante</td></tr>
+      <tr><td>Exigeante</td><td>Élitiste</td></tr>
+      <tr><td>Énergique</td><td>Agitée ou criarde</td></tr>
+      <tr><td>Experte</td><td>Jargonneuse</td></tr>
+    </table>
+  </div>
+  <div>
+    <div class="kicker">Principes d'écriture</div>
+    <ul class="rules">
+      <li>Phrases courtes. Verbes d'action. Un message par publication.</li>
+      <li>Des faits concrets plutôt que des superlatifs : séries, semaines, kilos, minutes.</li>
+      <li>Tutoiement sur les réseaux sociaux ; vouvoiement pour les entreprises et les devis.</li>
+      <li>Un emoji maximum par message, jamais dans un titre.</li>
+    </ul>
+    <div class="say do"><b>✓ À dire</b>« Trois séances par semaine, douze semaines, un objectif. On commence lundi ? »</div>
+    <div class="say dont"><b>✕ À éviter</b>« NO PAIN NO GAIN !!! 💪🔥🔥 Deviens une machine »</div>
+  </div>
+</div>
+<div class="channels">
+  <div><div class="kicker">Instagram</div><p>« 4 semaines de travail, +20 kg au squat. Fier de toi, Karim. Prochaine étape : 100 kg. »</p></div>
+  <div><div class="kicker">Message client</div><p>« Séance de demain décalée à 18 h. On garde le même programme, prévois de l'eau. »</p></div>
+  <div><div class="kicker">Entreprise</div><p>« Nous proposons un programme de 8 semaines pour vos équipes, adapté à tous les niveaux. »</p></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Personnalité & ton</span><span class="pn">07</span></div></section><section class="page divider dark" id="p8">
+<div class="div-pattern"><svg width="1123" height="794" viewBox="0 0 1123 794" preserveAspectRatio="xMidYMid slice"><defs><pattern id="dp02" width="180.0" height="48.0" patternUnits="userSpaceOnUse"><path d="M0 14.0 L120.0 -18.0 L112.0 2.0 Z" fill="#ffffff"/><path d="M90.0 38.0 L210.0 6.0 L202.0 26.0 Z" fill="#ffffff"/><path d="M-90.0 38.0 L30.0 6.0 L22.0 26.0 Z" fill="#ffffff"/><path d="M180.0 14.0 L300.0 -18.0 L292.0 2.0 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#dp02)" opacity="0.05"/></svg></div>
+<div class="div-num">02</div>
+<div class="div-body"><h1>Logo</h1><p>Le symbole, ses versions et les règles qui le protègent.</p><ul><li>Concept</li><li>Construction</li><li>Versions</li><li>Zone de protection & tailles</li><li>Couleurs & fonds</li><li>Interdits</li></ul></div>
+<svg class="sym div-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>
+<div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span></span><span class="pn">08</span></div></section><section class="page  " id="p9">
+<div class="concept">
+  <div class="concept-hero"><svg class="sym " style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div>
+  <div class="concept-text">
+    <div class="head"><div class="kicker">02 — Logo</div><h2>Un monogramme<br>en mouvement.</h2></div>
+    <p class="lead">Les initiales <b>J</b> et <b>T</b> sont dessinées comme deux lames qui s'élancent vers le haut à droite.
+    Le symbole se lit d'un coup d'œil : un nom, une direction, une énergie.</p>
+  </div>
+</div>
+<div class="grid3 readings">
+  <div><svg viewBox="-20 -20 877 452"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z"/><path fill="#111214" d="M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg><h3>Le T</h3><p>La longue barre et la lame descendante forment le T de Temam — une lettre devenue trajectoire.</p></div>
+  <div><svg viewBox="-20 -20 877 452"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z"/><path fill="#FA4616" d="M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg><h3>Le J</h3><p>Le J de Jonathan s'emboîte sous le T, en contre-forme : deux initiales, un seul geste.</p></div>
+  <div><svg viewBox="-20 -100 877 532"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/><path d="M0 140 L700 -47" stroke="#FA4616" stroke-width="12" stroke-dasharray="6 26"/><path d="M800 -74 L690 -80 L716 -16 Z" fill="#FA4616"/></svg><h3>L'élan</h3><p>L'ensemble monte à 15° et pointe vers l'avant : la progression, la vitesse, l'objectif.</p></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Concept</span><span class="pn">09</span></div></section><section class="page  " id="p10">
+<div class="head"><div class="kicker">02 — Logo</div><h2>Construction.</h2><p class="intro">Le symbole est construit uniquement en lignes droites, sur quatre angles qui se répondent. Ce sont ces angles — et surtout le 15° — qui structurent tout le système graphique.</p></div>
+<div class="constr">
+  <svg viewBox="-90 -90 1017 592" class="constr-svg">
+    <line x1="0" y1="-80" x2="0" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="93" y1="-80" x2="93" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="186" y1="-80" x2="186" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="279" y1="-80" x2="279" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="372" y1="-80" x2="372" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="465" y1="-80" x2="465" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="558" y1="-80" x2="558" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="651" y1="-80" x2="651" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="744" y1="-80" x2="744" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="837" y1="-80" x2="837" y2="492" stroke="#d9d6cf" stroke-width="1"/><line x1="-80" y1="0" x2="917" y2="0" stroke="#d9d6cf" stroke-width="1"/><line x1="-80" y1="103" x2="917" y2="103" stroke="#d9d6cf" stroke-width="1"/><line x1="-80" y1="206" x2="917" y2="206" stroke="#d9d6cf" stroke-width="1"/><line x1="-80" y1="309" x2="917" y2="309" stroke="#d9d6cf" stroke-width="1"/><line x1="-80" y1="412" x2="917" y2="412" stroke="#d9d6cf" stroke-width="1"/>
+    <path d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z" fill="#111214" opacity="0.92"/>
+    <line x1="-209.2" y1="285.0" x2="1046.2" y2="-57.0" stroke="#FA4616" stroke-width="2.4"/><line x1="-160.2" y1="259.1" x2="801.2" y2="72.2" stroke="#3D7BFF" stroke-width="2.4"/><line x1="243.2" y1="224.4" x2="541.8" y2="166.3" stroke="#3D7BFF" stroke-width="2.4"/><line x1="74.8" y1="424.9" x2="472.1" y2="347.6" stroke="#3D7BFF" stroke-width="2.4"/><line x1="577.0" y1="123.9" x2="466.6" y2="360.4" stroke="#18A058" stroke-width="2.4"/><line x1="513.5" y1="129.9" x2="384.4" y2="406.6" stroke="#18A058" stroke-width="2.4"/><line x1="418.2" y1="208.2" x2="363.0" y2="326.8" stroke="#18A058" stroke-width="2.4"/><line x1="925.0" y1="-80.2" x2="397.0" y2="401.2" stroke="#8A8F98" stroke-width="2.4"/><circle cx="837" cy="0" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="0" cy="228" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="641" cy="103.4" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="558.6" cy="163.3" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="485" cy="321" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="492" cy="176" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="293" cy="214.7" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="409" cy="228" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="372.2" cy="307" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="141" cy="412" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/><circle cx="405.9" cy="360.5" r="6" fill="#fff" stroke="#111214" stroke-width="2.5"/>
+    <text x="-80" y="470" class="dim">837 × 412 — ratio 2,03 : 1</text>
+  </svg>
+  <div class="legend">
+    <div><i style="background:#FA4616"></i><b>15°</b><span>Arête supérieure — l'angle de marque, repris dans les mises en page.</span></div>
+    <div><i style="background:#3D7BFF"></i><b>11°</b><span>Parallèles : bas de la barre, haut du crochet et base du J.</span></div>
+    <div><i style="background:#18A058"></i><b>65°</b><span>Fûts parallèles du T et du J : le rythme de la lettre.</span></div>
+    <div><i style="background:#8A8F98"></i><b>42°</b><span>Lame extérieure : la pointe qui ferme le T.</span></div>
+    <p class="note">Formes pleines, sans courbe ni dégradé : le logo se découpe, se brode et se grave sans perte.
+    Le symbole ne doit jamais être redessiné — utilisez toujours les fichiers fournis.</p>
+  </div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Construction</span><span class="pn">10</span></div></section><section class="page  " id="p11">
+<div class="head"><div class="kicker">02 — Logo</div><h2>Les versions du logo.</h2><p class="intro">Quatre versions pour s'adapter à chaque format. Le symbole et le nom gardent toujours les mêmes proportions entre eux.</p></div>
+<div class="versions">
+  <div class="v-tile wide"><div class="v-art"><img src="../logo/svg/jt-horizontal-noir.svg" style="width:78%"></div>
+    <div class="v-cap"><b>Horizontal — version principale</b><span>Site web, en-têtes, signatures, documents, bannières.</span></div></div>
+  <div class="v-tile"><div class="v-art"><img src="../logo/svg/jt-vertical-noir.svg" style="width:62%"></div>
+    <div class="v-cap"><b>Vertical</b><span>Formats carrés ou hauts : textile, affiches, roll-up.</span></div></div>
+  <div class="v-tile"><div class="v-art"><img src="../logo/svg/jt-symbole-noir.svg" style="width:56%"></div>
+    <div class="v-cap"><b>Symbole</b><span>Avatars, icônes, broderie, signature visuelle quand le nom est déjà présent.</span></div></div>
+  <div class="v-tile"><div class="v-art"><img src="../logo/svg/jt-logotype-noir.svg" style="width:78%"></div>
+    <div class="v-cap"><b>Logotype</b><span>Petits espaces horizontaux, mentions, partenariats.</span></div></div>
+  <div class="v-tile dark"><div class="v-art"><img src="../logo/svg/jt-avatar-noir.svg" style="width:42%;border-radius:50%"></div>
+    <div class="v-cap"><b>Avatar</b><span>Photo de profil Instagram, WhatsApp, Google.</span></div></div>
+</div>
+<p class="foot-note">Le logotype est composé en Archivo Expanded Bold et vectorisé. Ne jamais le retaper au clavier.</p><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Versions</span><span class="pn">11</span></div></section><section class="page  " id="p12">
+<div class="head"><div class="kicker">02 — Logo</div><h2>Zone de protection & tailles minimales.</h2></div>
+<div class="two-col cs">
+  <div>
+    <div class="cs-art">
+      <div class="cs-zone">
+        <img src="../logo/svg/jt-horizontal-noir.svg">
+        <span class="x x-t">X</span><span class="x x-b">X</span><span class="x x-l">X</span><span class="x x-r">X</span>
+      </div>
+    </div>
+    <p><b>X = un quart de la hauteur du symbole.</b> Aucun texte, image ou bord de page ne doit entrer dans cette zone.
+    Elle grandit et rétrécit avec le logo : c'est une proportion, jamais une distance fixe.</p>
+  </div>
+  <div>
+    <div class="cs-x">
+      <svg viewBox="-40 -10 920 430"><path d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z" fill="#111214"/>
+      <line x1="-30" x2="880" y1="0" y2="0" stroke="#FA4616" stroke-width="2" stroke-dasharray="8 8"/><line x1="-30" x2="880" y1="103" y2="103" stroke="#FA4616" stroke-width="2" stroke-dasharray="8 8"/><line x1="-30" x2="880" y1="206" y2="206" stroke="#FA4616" stroke-width="2" stroke-dasharray="8 8"/><line x1="-30" x2="880" y1="309" y2="309" stroke="#FA4616" stroke-width="2" stroke-dasharray="8 8"/><line x1="-30" x2="880" y1="412" y2="412" stroke="#FA4616" stroke-width="2" stroke-dasharray="8 8"/>
+      <rect x="-36" y="0" width="22" height="103" fill="#FA4616"/><text x="-60" y="62" class="xl">X</text></svg>
+    </div>
+    <table class="spec">
+      <tr><th>Version</th><th>Écran</th><th>Impression</th></tr>
+      <tr><td>Horizontal</td><td>140 px de large</td><td>35 mm</td></tr>
+      <tr><td>Vertical</td><td>90 px de large</td><td>22 mm</td></tr>
+      <tr><td>Logotype</td><td>110 px de large</td><td>28 mm</td></tr>
+      <tr><td>Symbole</td><td>32 px de large</td><td>8 mm</td></tr>
+      <tr><td>Symbole petite taille</td><td>16 – 31 px</td><td>4 – 8 mm · broderie</td></tr>
+    </table>
+    <p class="note">Sous 32 px, utilisez le fichier <code>jt-symbole-petite-taille</code> : pointes raccourcies et
+    épaissies pour rester lisibles (favicon, petites broderies).</p>
+  </div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Zone de protection</span><span class="pn">12</span></div></section><section class="page  " id="p13">
+<div class="head"><div class="kicker">02 — Logo</div><h2>Versions couleur & fonds autorisés.</h2><p class="intro">Le logo vit d'abord en noir et blanc. L'Orange Impulsion est réservé au symbole, pour signer avec force.</p></div>
+<div class="grid3 cvs"><div class="cv"><div class="cv-art" style="background:#F3F1EC"><img src="../logo/svg/jt-horizontal-noir.svg"></div><b>Noir sur Craie</b><span>Version principale</span></div><div class="cv"><div class="cv-art" style="background:#111214"><img src="../logo/svg/jt-horizontal-blanc.svg"></div><b>Blanc sur Noir</b><span>Version inversée</span></div><div class="cv"><div class="cv-art" style="background:#111214"><img src="../logo/svg/jt-horizontal-accent-sombre.svg"></div><b>Accent sur Noir</b><span>Symbole Orange Impulsion — signature forte</span></div><div class="cv"><div class="cv-art" style="background:#FFFFFF"><img src="../logo/svg/jt-horizontal-accent-clair.svg"></div><b>Accent sur Blanc</b><span>Symbole orange, nom en noir</span></div><div class="cv"><div class="cv-art" style="background:#FA4616"><img src="../logo/svg/jt-horizontal-noir.svg"></div><b>Noir sur Orange</b><span>Supports promotionnels</span></div><div class="cv"><div class="cv-art" style="background:#2A2C30"><img src="../logo/svg/jt-horizontal-blanc.svg"></div><b>Blanc sur Graphite</b><span>Alternative au noir</span></div></div>
+<p class="foot-note">Le blanc sur Orange est déconseillé pour le nom (contraste 3,5:1) : réservez-le au symbole seul en grand format.</p><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Versions couleur</span><span class="pn">13</span></div></section><section class="page  " id="p14">
+<div class="head"><div class="kicker">02 — Logo</div><h2>Logo sur image.</h2><p class="intro">Sur une photo, le logo se place toujours sur une zone calme et contrastée. Si aucune zone ne convient, utilisez le cartouche.</p></div>
+<div class="grid3 photos">
+  <div><div class="ph ph-dark"><img src="../logo/svg/jt-horizontal-blanc.svg" class="ph-logo tl"></div>
+  <b>✓ Blanc sur zone sombre</b><span>Le cas le plus courant : salles, éclairages latéraux.</span></div>
+  <div><div class="ph ph-light"><img src="../logo/svg/jt-horizontal-noir.svg" class="ph-logo bl"></div>
+  <b>✓ Noir sur zone claire</b><span>Extérieurs, ciels, murs clairs.</span></div>
+  <div><div class="ph ph-busy"><div class="cartouche"><img src="../logo/svg/jt-symbole-blanc.svg"></div></div>
+  <b>✓ Cartouche sur fond chargé</b><span>Carré Noir Carbone, symbole blanc, marge = X.</span></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Logo sur image</span><span class="pn">14</span></div></section><section class="page  " id="p15"><div class="head"><div class="kicker">02 — Logo</div><h2>Ce qu'il ne faut pas faire.</h2><p class="intro">Le logo est un fichier, pas un dessin à refaire. Toute modification, même légère, affaiblit la reconnaissance.</p></div>
+<div class="grid4 bads"><div class="bad"><div class="bad-art" style="background:#fff"><img src="../logo/svg/jt-horizontal-noir.svg" style="width:72%;transform:scaleX(1.35) scaleY(.75)"><span class="cross">✕</span></div><span>Déformer, étirer ou écraser</span></div><div class="bad"><div class="bad-art" style="background:#fff"><img src="../logo/svg/jt-horizontal-noir.svg" style="width:72%;filter:invert(32%) sepia(90%) saturate(2000%) hue-rotate(200deg)"><span class="cross">✕</span></div><span>Changer les couleurs</span></div><div class="bad"><div class="bad-art" style="background:#fff"><img src="../logo/svg/jt-horizontal-noir.svg" style="width:66%;transform:rotate(-12deg)"><span class="cross">✕</span></div><span>Pivoter ou incliner</span></div><div class="bad"><div class="bad-art" style="background:#fff"><img src="../logo/svg/jt-horizontal-noir.svg" style="width:72%;filter:drop-shadow(6px 6px 3px rgba(0,0,0,.55))"><span class="cross">✕</span></div><span>Ajouter ombres ou effets</span></div><div class="bad"><div class="bad-art" style="background:#fff"><div style="display:flex;align-items:center;gap:10px;width:80%"><img src="../logo/svg/jt-logotype-noir.svg" style="width:62%"><img src="../logo/svg/jt-symbole-noir.svg" style="width:34%"></div><span class="cross">✕</span></div><span>Réorganiser les éléments</span></div><div class="bad"><div class="bad-art" style="background:#fff"><div style="display:flex;align-items:center;gap:12px;width:80%"><svg class="sym " style="width:40%" viewBox="0 0 837 412" aria-hidden="true"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg><span style="font:italic 700 17px Georgia,serif;color:#111">Jonathan Temam</span></div><span class="cross">✕</span></div><span>Retaper le nom dans une autre police</span></div><div class="bad"><div class="bad-art" style="background:#2A2C30"><img src="../logo/svg/jt-horizontal-noir.svg" style="width:72%"><span class="cross">✕</span></div><span>Contraste insuffisant</span></div><div class="bad"><div class="bad-art" style="background:repeating-linear-gradient(105deg,#d24a20 0 14px,#2b2b2b 14px 26px,#e8d9b0 26px 40px)"><img src="../logo/svg/jt-horizontal-noir.svg" style="width:72%;position:relative"><span class="cross">✕</span></div><span>Fond chargé sans cartouche</span></div></div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Interdits</span><span class="pn">15</span></div></section><section class="page divider dark" id="p16">
+<div class="div-pattern"><svg width="1123" height="794" viewBox="0 0 1123 794" preserveAspectRatio="xMidYMid slice"><defs><pattern id="dp03" width="180.0" height="48.0" patternUnits="userSpaceOnUse"><path d="M0 14.0 L120.0 -18.0 L112.0 2.0 Z" fill="#ffffff"/><path d="M90.0 38.0 L210.0 6.0 L202.0 26.0 Z" fill="#ffffff"/><path d="M-90.0 38.0 L30.0 6.0 L22.0 26.0 Z" fill="#ffffff"/><path d="M180.0 14.0 L300.0 -18.0 L292.0 2.0 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#dp03)" opacity="0.05"/></svg></div>
+<div class="div-num">03</div>
+<div class="div-body"><h1>Couleurs</h1><p>Une palette courte et contrastée : du noir pour l'exigence, de l'orange pour l'élan.</p><ul><li>Palette & codes</li><li>Proportions</li><li>Contrastes & accessibilité</li></ul></div>
+<svg class="sym div-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>
+<div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span></span><span class="pn">16</span></div></section><section class="page  " id="p17"><div class="head"><div class="kicker">03 — Couleurs</div><h2>La palette.</h2></div>
+<div class="swatches"><div class="swatch"><div class="sw-c" style="background:#111214;color:#fff"><span class="sw-role">Principale</span><b>Noir Carbone</b></div>
+<dl><dt>HEX</dt><dd>#111214</dd><dt>RVB</dt><dd>17 · 18 · 20</dd><dt>CMJN</dt><dd>60 · 50 · 40 · 100<br><small>texte : 0 · 0 · 0 · 100</small></dd><dt>Pantone</dt><dd>Black 6 C</dd></dl></div><div class="swatch"><div class="sw-c" style="background:#F3F1EC;color:#111214"><span class="sw-role">Principale</span><b>Blanc Craie</b></div>
+<dl><dt>HEX</dt><dd>#F3F1EC</dd><dt>RVB</dt><dd>243 · 241 · 236</dd><dt>CMJN</dt><dd>0 · 1 · 3 · 5</dd><dt>Pantone</dt><dd>Warm Gray 1 C à 30 %</dd></dl></div><div class="swatch"><div class="sw-c" style="background:#FA4616;color:#111214"><span class="sw-role">Accent</span><b>Orange Impulsion</b></div>
+<dl><dt>HEX</dt><dd>#FA4616</dd><dt>RVB</dt><dd>250 · 70 · 22</dd><dt>CMJN</dt><dd>0 · 85 · 100 · 0</dd><dt>Pantone</dt><dd>172 C</dd></dl></div><div class="swatch"><div class="sw-c" style="background:#2A2C30;color:#fff"><span class="sw-role">Secondaire</span><b>Graphite</b></div>
+<dl><dt>HEX</dt><dd>#2A2C30</dd><dt>RVB</dt><dd>42 · 44 · 48</dd><dt>CMJN</dt><dd>70 · 60 · 50 · 75</dd><dt>Pantone</dt><dd>426 C</dd></dl></div><div class="swatch"><div class="sw-c" style="background:#888B8D;color:#111214"><span class="sw-role">Secondaire</span><b>Gris Acier</b></div>
+<dl><dt>HEX</dt><dd>#888B8D</dd><dt>RVB</dt><dd>136 · 139 · 141</dd><dt>CMJN</dt><dd>0 · 1 · 0 · 45</dd><dt>Pantone</dt><dd>Cool Gray 8 C</dd></dl></div></div>
+<p class="foot-note">RVB/HEX pour les écrans · CMJN pour l'impression quadri · Pantone pour les tons directs, le textile et la signalétique.
+Les références Pantone sont les plus proches : validez-les sur nuancier imprimé avant toute production.</p><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Palette</span><span class="pn">17</span></div></section><section class="page  " id="p18"><div class="head"><div class="kicker">03 — Couleurs</div><h2>Proportions & contrastes.</h2><p class="intro">Le noir et la craie portent la marque ; l'orange ponctue. Trop d'orange, et il ne signale plus rien.</p></div>
+<div class="ratio">
+  <div style="flex:50;background:#111214;color:#fff">Noir Carbone<b>50 %</b></div>
+  <div style="flex:30;background:#F3F1EC;color:#111214">Blanc Craie<b>30 %</b></div>
+  <div style="flex:10;background:#2A2C30;color:#fff">Graphite<b>10 %</b></div>
+  <div style="flex:7;background:#FA4616;color:#111214">Orange<b>7 %</b></div>
+  <div style="flex:3;background:#888B8D;color:#111214"><b>3 %</b></div>
+</div>
+<div class="grid6 cts"><div class="ct" style="background:#111214;color:#F3F1EC"><span class="ct-a">Aa</span><span class="ct-l">Craie sur Noir<br><b>16,6:1 · AAA</b></span></div><div class="ct" style="background:#F3F1EC;color:#111214"><span class="ct-a">Aa</span><span class="ct-l">Noir sur Craie<br><b>16,6:1 · AAA</b></span></div><div class="ct" style="background:#111214;color:#FA4616"><span class="ct-a">Aa</span><span class="ct-l">Orange sur Noir<br><b>5,3:1 · AA</b></span></div><div class="ct" style="background:#FA4616;color:#111214"><span class="ct-a">Aa</span><span class="ct-l">Noir sur Orange<br><b>5,3:1 · AA</b></span></div><div class="ct" style="background:#111214;color:#888B8D"><span class="ct-a">Aa</span><span class="ct-l">Acier sur Noir<br><b>5,5:1 · AA</b></span></div><div class="ct" style="background:#F3F1EC;color:#FA4616"><span class="ct-a">Aa</span><span class="ct-l">Orange sur Craie<br><b>3,1:1 · Grands titres uniquement</b></span></div></div>
+<p class="foot-note">Ratios calculés selon WCAG 2.1. L'orange n'est jamais utilisé pour du texte courant sur fond clair : réservez-le aux titres, chiffres clés, boutons sur fond noir et au symbole.</p><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Proportions</span><span class="pn">18</span></div></section><section class="page divider dark" id="p19">
+<div class="div-pattern"><svg width="1123" height="794" viewBox="0 0 1123 794" preserveAspectRatio="xMidYMid slice"><defs><pattern id="dp04" width="180.0" height="48.0" patternUnits="userSpaceOnUse"><path d="M0 14.0 L120.0 -18.0 L112.0 2.0 Z" fill="#ffffff"/><path d="M90.0 38.0 L210.0 6.0 L202.0 26.0 Z" fill="#ffffff"/><path d="M-90.0 38.0 L30.0 6.0 L22.0 26.0 Z" fill="#ffffff"/><path d="M180.0 14.0 L300.0 -18.0 L292.0 2.0 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#dp04)" opacity="0.05"/></svg></div>
+<div class="div-num">04</div>
+<div class="div-body"><h1>Typographie</h1><p>Deux familles libres de droits : une pour frapper, une pour expliquer.</p><ul><li>Archivo Expanded — titres</li><li>Inter — textes</li><li>Hiérarchie</li></ul></div>
+<svg class="sym div-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>
+<div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span></span><span class="pn">19</span></div></section><section class="page  " id="p20"><div class="head"><div class="kicker">04 — Typographie</div><h2>Archivo Expanded.</h2><p class="intro">Titres, accroches, chiffres clés. Large, solide, toujours en capitales. C'est la police du logotype.</p></div>
+<div class="spec-type">
+  <div class="aa archivo">Aa</div>
+  <div>
+    <div class="alpha archivo">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 — €%+ ! ? &amp;</div>
+    <div class="weights">
+      <span class="archivo" style="font-weight:500">Medium 500</span>
+      <span class="archivo" style="font-weight:700">Bold 700</span>
+      <span class="archivo" style="font-weight:800">ExtraBold 800</span>
+      <span class="archivo" style="font-weight:800;font-style:italic">ExtraBold Italic</span>
+    </div>
+    <ul class="rules small">
+      <li>Largeur <b>Expanded (125)</b> — réglage « wdth » de la police variable.</li>
+      <li>Titres en capitales, approche +1 à +4 %, interlignage 95–105 %.</li>
+      <li>L'italique est réservé aux chiffres de performance (temps, kilos, séries).</li>
+      <li>Licence SIL Open Font License · Google Fonts · gratuite, usage commercial autorisé.</li>
+    </ul>
+  </div>
+</div>
+<div class="sample-line">Vise plus haut. <span>−12 kg · 5×5 · 42:15</span></div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Archivo</span><span class="pn">20</span></div></section><section class="page  " id="p21"><div class="head"><div class="kicker">04 — Typographie</div><h2>Inter & hiérarchie.</h2></div>
+<div class="two-col">
+  <div>
+    <div class="spec-type small">
+      <div class="aa inter">Aa</div>
+      <div><div class="alpha inter">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</div>
+      <p class="note">Inter — textes courants, interfaces, légendes. Regular 400, Medium 500, SemiBold 600.
+      Licence SIL OFL · Google Fonts.<br>Polices de secours : Arial / Helvetica.</p></div>
+    </div>
+  </div>
+  <div class="hier">
+    <div class="h-row"><span class="h-l">Surtitre<br><small>Archivo Exp. Medium 11 pt · capitales · +30 %</small></span><span class="kicker orange">Programme 12 semaines</span></div>
+    <div class="h-row"><span class="h-l">Titre 1<br><small>Archivo Exp. ExtraBold 40 pt · capitales</small></span><span class="h1s">Vise plus haut.</span></div>
+    <div class="h-row"><span class="h-l">Titre 2<br><small>Archivo Exp. Bold 20 pt</small></span><span class="h2s">Préparation physique</span></div>
+    <div class="h-row"><span class="h-l">Chiffre clé<br><small>Archivo Exp. ExtraBold Italic</small></span><span class="kpi">−12 kg</span></div>
+    <div class="h-row"><span class="h-l">Texte<br><small>Inter Regular 10–11 pt · interligne 150 %</small></span><span class="body-s">Un bilan complet, un plan d'entraînement sur mesure et un suivi chaque semaine pour progresser sans se blesser.</span></div>
+    <div class="h-row"><span class="h-l">Légende<br><small>Inter Medium 8 pt · Gris Acier</small></span><span class="cap-s">Séance small group — Paris 11e</span></div>
+  </div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Inter & hiérarchie</span><span class="pn">21</span></div></section><section class="page divider dark" id="p22">
+<div class="div-pattern"><svg width="1123" height="794" viewBox="0 0 1123 794" preserveAspectRatio="xMidYMid slice"><defs><pattern id="dp05" width="180.0" height="48.0" patternUnits="userSpaceOnUse"><path d="M0 14.0 L120.0 -18.0 L112.0 2.0 Z" fill="#ffffff"/><path d="M90.0 38.0 L210.0 6.0 L202.0 26.0 Z" fill="#ffffff"/><path d="M-90.0 38.0 L30.0 6.0 L22.0 26.0 Z" fill="#ffffff"/><path d="M180.0 14.0 L300.0 -18.0 L292.0 2.0 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#dp05)" opacity="0.05"/></svg></div>
+<div class="div-num">05</div>
+<div class="div-body"><h1>Éléments<br>graphiques</h1><p>Des outils dérivés du symbole pour reconnaître la marque, même sans logo.</p><ul><li>L'angle 15° & le Trait</li><li>Le motif Sillage</li><li>Pictogrammes</li><li>Direction photo</li></ul></div>
+<svg class="sym div-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>
+<div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span></span><span class="pn">22</span></div></section><section class="page  " id="p23"><div class="head"><div class="kicker">05 — Éléments graphiques</div><h2>L'angle 15° & le Trait.</h2><p class="intro">Deux signatures issues du symbole. L'angle de son arête supérieure découpe les images et les aplats ; sa pointe effilée devient un trait de soulignement.</p></div>
+<div class="grid3 angle mt">
+  <div><div class="ang-demo"><div class="ang-cut"></div><div class="ang-txt">15°</div></div>
+    <b>Découpe à 15°</b><span>Coins d'images, bandeaux et aplats sont coupés à 15°, montant vers la droite. Un seul angle par composition.</span></div>
+  <div><div class="trait-demo"><div class="t-title">Force &amp;<br>mobilité</div><svg class="trait" width="260" height="10" viewBox="0 0 260 10"><path fill="#FA4616" d="M0 10 L260 0 L256.1 10 Z"/></svg></div>
+    <b>Le Trait</b><span>Souligne un titre, sépare deux blocs, marque une progression. Toujours effilé vers la gauche, pointe vers la droite.</span></div>
+  <div><div class="badge-demo"><div class="badge"><span>Séance</span><b>N°24</b></div><svg class="trait" width="160" height="6" viewBox="0 0 160 6"><path fill="#F3F1EC" d="M0 6 L160 0 L157.6 6 Z"/></svg></div>
+    <b>Étiquette</b><span>Aplat noir, texte Archivo, trait orange ou craie. Pour numéroter séances, semaines, étapes.</span></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Angle & Trait</span><span class="pn">23</span></div></section><section class="page  " id="p24"><div class="head"><div class="kicker">05 — Éléments graphiques</div><h2>Le motif « Sillage ».</h2><p class="intro">Des lames effilées en quinconce, comme une trace de vitesse. Il habille les fonds, les dos de cartes, le textile et les publications sans texte.</p></div>
+<div class="grid3 patterns mt">
+  <div><div class="pat"><svg width="330" height="250" viewBox="0 0 330 250" preserveAspectRatio="xMidYMid slice"><defs><pattern id="pa" width="162.0" height="43.2" patternUnits="userSpaceOnUse"><path d="M0 12.6 L108.0 -16.2 L100.8 1.8 Z" fill="#ffffff"/><path d="M81.0 34.2 L189.0 5.4 L181.8 23.4 Z" fill="#ffffff"/><path d="M-81.0 34.2 L27.0 5.4 L19.8 23.4 Z" fill="#ffffff"/><path d="M162.0 12.6 L270.0 -16.2 L262.8 1.8 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="#111214"/><rect width="100%" height="100%" fill="url(#pa)" opacity="0.14"/></svg></div><b>Sur Noir</b><span>Blanc à 10–15 % d'opacité.</span></div>
+  <div><div class="pat"><svg width="330" height="250" viewBox="0 0 330 250" preserveAspectRatio="xMidYMid slice"><defs><pattern id="pb" width="162.0" height="43.2" patternUnits="userSpaceOnUse"><path d="M0 12.6 L108.0 -16.2 L100.8 1.8 Z" fill="#111214"/><path d="M81.0 34.2 L189.0 5.4 L181.8 23.4 Z" fill="#111214"/><path d="M-81.0 34.2 L27.0 5.4 L19.8 23.4 Z" fill="#111214"/><path d="M162.0 12.6 L270.0 -16.2 L262.8 1.8 Z" fill="#111214"/></pattern></defs><rect width="100%" height="100%" fill="#F3F1EC"/><rect width="100%" height="100%" fill="url(#pb)" opacity="0.08"/></svg></div><b>Sur Craie</b><span>Noir à 6–10 %.</span></div>
+  <div><div class="pat"><svg width="330" height="250" viewBox="0 0 330 250" preserveAspectRatio="xMidYMid slice"><defs><pattern id="pc" width="162.0" height="43.2" patternUnits="userSpaceOnUse"><path d="M0 12.6 L108.0 -16.2 L100.8 1.8 Z" fill="#111214"/><path d="M81.0 34.2 L189.0 5.4 L181.8 23.4 Z" fill="#111214"/><path d="M-81.0 34.2 L27.0 5.4 L19.8 23.4 Z" fill="#111214"/><path d="M162.0 12.6 L270.0 -16.2 L262.8 1.8 Z" fill="#111214"/></pattern></defs><rect width="100%" height="100%" fill="#FA4616"/><rect width="100%" height="100%" fill="url(#pc)" opacity="0.9"/></svg></div><b>Orange Impulsion</b><span>Pleine intensité, pour textile et goodies.</span></div>
+</div>
+<p class="foot-note">Le motif ne se combine jamais avec le logo dans la même zone : laissez toujours au logo sa zone de protection sur un aplat.</p><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Motif</span><span class="pn">24</span></div></section><section class="page  " id="p25"><div class="head"><div class="kicker">05 — Éléments graphiques</div><h2>Pictogrammes.</h2><p class="intro">Un jeu de pictogrammes linéaires, angles vifs et extrémités carrées, pour présenter l'offre et rythmer les supports.</p></div>
+<div class="icons"><div class="ic"><div class="ic-box"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 18v12M11 13v22M37 13v22M42 18v12M11 24h26"/></svg></div><span>Force</span></div><div class="ic"><div class="ic-box"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 27h10l4-11 6 21 5-15 3 5h12"/></svg></div><span>Cardio</span></div><div class="ic"><div class="ic-box"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><circle cx="24" cy="27" r="15"/><path d="M24 27l7-7M19 5h10M24 5v7"/></svg></div><span>Chrono</span></div><div class="ic"><div class="ic-box"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><circle cx="22" cy="26" r="16"/><circle cx="22" cy="26" r="8"/><path d="M22 26L42 8M35 7h8v8"/></svg></div><span>Objectif</span></div><div class="ic"><div class="ic-box"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 11h36v31H6zM6 19h36M15 6v9M33 6v9M17 30l5 5 9-10"/></svg></div><span>Planning</span></div><div class="ic"><div class="ic-box"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M5 42h9v-8h9v-8h9v-8h11M34 8h9v9M43 8L28 23"/></svg></div><span>Progression</span></div><div class="ic"><div class="ic-box"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M24 15c-9-6-18 0-17 11 1 10 8 17 17 15 9 2 16-5 17-15 1-11-8-17-17-11zM24 15c0-5 3-8 7-10"/></svg></div><span>Nutrition</span></div><div class="ic"><div class="ic-box"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M8 9h32v23H8zM3 39h42M20 16l9 5-9 5z"/></svg></div><span>Visio</span></div></div>
+<div class="two-col mt-s"><ul class="rules small"><li>Grille de 48 × 48, trait de 3 unités, angles vifs, aucune courbe décorative.</li>
+<li>Une seule couleur : Noir, Blanc ou Orange Impulsion selon le fond.</li><li>Taille minimale : 20 px / 6 mm.</li></ul>
+<div class="icons small"><div class="ic"><div class="ic-box dark"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 18v12M11 13v22M37 13v22M42 18v12M11 24h26"/></svg></div></div><div class="ic"><div class="ic-box dark"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 27h10l4-11 6 21 5-15 3 5h12"/></svg></div></div><div class="ic"><div class="ic-box dark"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><circle cx="24" cy="27" r="15"/><path d="M24 27l7-7M19 5h10M24 5v7"/></svg></div></div><div class="ic"><div class="ic-box dark"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><circle cx="22" cy="26" r="16"/><circle cx="22" cy="26" r="8"/><path d="M22 26L42 8M35 7h8v8"/></svg></div></div></div></div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Pictogrammes</span><span class="pn">25</span></div></section><section class="page  " id="p26"><div class="head"><div class="kicker">05 — Éléments graphiques</div><h2>Direction photo.</h2><p class="intro">Les photos montrent l'effort réel, pas la pose. Lumière franche, contraste marqué, mouvement dans le cadre.</p></div>
+<div class="photo-dir">
+  <div class="pd-main"><div class="pd-img a"></div><div class="pd-cut"></div>
+    <div class="pd-txt"><div class="kicker orange">Exemple de composition · visuel d'illustration</div><div class="h2s light">L'effort,<br>pas la pose.</div></div>
+    <img src="../logo/svg/jt-symbole-blanc.svg" class="pd-logo"></div>
+  <div class="pd-rules">
+    <div class="kicker">À rechercher</div>
+    <ul class="rules small"><li><b>Action</b> — en plein mouvement : sprint, levée, impact.</li>
+    <li><b>Lumière latérale</b> — ombres franches, peau texturée, sueur visible.</li>
+    <li><b>Diagonales</b> — corps et cadrage qui montent vers la droite, comme le symbole.</li>
+    <li><b>Traitement</b> — tons neutres et froids désaturés ; l'orange vient des aplats, pas des filtres.</li></ul>
+    <div class="kicker mt-s">À éviter</div>
+    <ul class="rules small neg"><li>Photos de banque d'images posées et souriantes face caméra.</li>
+    <li>Filtres colorés, vignettages, néons.</li><li>Selfies de miroir, avant/après sans consentement écrit.</li></ul>
+  </div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Direction photo</span><span class="pn">26</span></div></section><section class="page divider dark" id="p27">
+<div class="div-pattern"><svg width="1123" height="794" viewBox="0 0 1123 794" preserveAspectRatio="xMidYMid slice"><defs><pattern id="dp06" width="180.0" height="48.0" patternUnits="userSpaceOnUse"><path d="M0 14.0 L120.0 -18.0 L112.0 2.0 Z" fill="#ffffff"/><path d="M90.0 38.0 L210.0 6.0 L202.0 26.0 Z" fill="#ffffff"/><path d="M-90.0 38.0 L30.0 6.0 L22.0 26.0 Z" fill="#ffffff"/><path d="M180.0 14.0 L300.0 -18.0 L292.0 2.0 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#dp06)" opacity="0.05"/></svg></div>
+<div class="div-num">06</div>
+<div class="div-body"><h1>Applications</h1><p>Le système en situation : ce que les gens verront, toucheront et porteront.</p><ul><li>Papeterie</li><li>Réseaux sociaux</li><li>Textile</li><li>Accessoires & événementiel</li><li>Web</li><li>Motion</li></ul></div>
+<svg class="sym div-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>
+<div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span></span><span class="pn">27</span></div></section><section class="page  " id="p28"><div class="head"><div class="kicker">06 — Applications</div><h2>Papeterie.</h2></div>
+<div class="stationery">
+  <div class="bc-stack">
+    <div class="bc bc-front"><svg class="sym bc-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg><div class="bc-tag">Vise plus haut.</div></div>
+    <div class="bc bc-back">
+      <div class="bc-name">Jonathan Temam</div><div class="bc-role">Coach sportif · Préparateur physique</div>
+      <svg class="trait" width="70" height="4" viewBox="0 0 70 4"><path fill="#FA4616" d="M0 4 L70 0 L69.0 4 Z"/></svg>
+      <div class="bc-info">+33 6 00 00 00 00<br>contact@jonathantemam.fr<br>@jonathan.temam</div>
+    </div>
+    <p class="cap-s">Carte de visite 85 × 55 mm — recto Noir Carbone, verso Blanc Craie · papier 350 g non couché.</p>
+  </div>
+  <div class="letter">
+    <div class="lt-head"><img src="../logo/svg/jt-horizontal-noir.svg"></div>
+    <div class="lt-body"><div class="lt-to">Madame Durand<br>Service RH — Atelier Nord<br>75011 Paris</div>
+    <div class="lt-obj">Objet : programme de coaching collectif</div>
+    <div class="lt-line"></div><div class="lt-line"></div><div class="lt-line"></div><div class="lt-line"></div><div class="lt-line"></div><div class="lt-line"></div><div class="lt-line"></div><div class="lt-line"></div><div class="lt-line"></div><div class="lt-line short"></div></div>
+    <div class="lt-foot"><svg class="trait" width="40" height="3" viewBox="0 0 40 3"><path fill="#FA4616" d="M0 3 L40 0 L39.4 3 Z"/></svg><span>Jonathan Temam · Coach sportif · contact@jonathantemam.fr · SIRET 000 000 000 00000</span></div>
+  </div>
+  <div class="mail">
+    <div class="kicker">Signature e-mail</div>
+    <div class="mail-box"><div class="mail-sym"><svg class="sym " style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div><b>Jonathan Temam</b><span>Coach sportif</span>
+    <span class="o">+33 6 00 00 00 00 · jonathantemam.fr</span></div></div>
+  </div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Papeterie</span><span class="pn">28</span></div></section><section class="page  " id="p29"><div class="head"><div class="kicker">06 — Applications</div><h2>Réseaux sociaux.</h2></div>
+<div class="social">
+  <div class="phone"><div class="ph-screen">
+    <div class="ig-head"><img src="../logo/svg/jt-avatar-noir.svg" class="ig-av"><div class="ig-stats"><b>248</b><span>publications</span></div><div class="ig-stats"><b>12,4 k</b><span>abonnés</span></div><div class="ig-stats"><b>310</b><span>suivi(e)s</span></div></div>
+    <div class="ig-bio"><b>Jonathan Temam</b><br>Coach sportif · Préparation physique<br>Vise plus haut. ↗ Bilan offert</div>
+    <div class="ig-grid"><div class="post" style="background:#111214;color:#fff"><div class="pq">La discipline<br>bat la<br><span class="o">motivation.</span></div><svg class="trait" width="90" height="5" viewBox="0 0 90 5"><path fill="#FA4616" d="M0 5 L90 0 L88.7 5 Z"/></svg><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post pd-img b"><div class="p-cut"></div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post" style="background:#FA4616;color:#111214"><div class="p-k">Nouveau</div><div class="pq">Programme<br>12 semaines</div><div class="p-s">Force · Cardio · Mobilité<br>Démarrage le 4 novembre</div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post" style="background:#F3F1EC;color:#111214"><div class="p-k">Résultats</div><div class="pkpi">−12<small>kg</small></div><div class="p-s">16 semaines · 3 séances / semaine<br>Témoignage client (exemple)</div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post"><svg width="300" height="300" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice"><defs><pattern id="pp10514664" width="108.0" height="28.8" patternUnits="userSpaceOnUse"><path d="M0 8.4 L72.0 -10.8 L67.2 1.2 Z" fill="#fff"/><path d="M54.0 22.8 L126.0 3.6 L121.2 15.6 Z" fill="#fff"/><path d="M-54.0 22.8 L18.0 3.6 L13.2 15.6 Z" fill="#fff"/><path d="M108.0 8.4 L180.0 -10.8 L175.2 1.2 Z" fill="#fff"/></pattern></defs><rect width="100%" height="100%" fill="#111214"/><rect width="100%" height="100%" fill="url(#pp10514664)" opacity="0.14"/></svg><svg class="sym p-sym big" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post" style="background:#2A2C30;color:#fff"><div class="p-k">Conseil n°08</div><div class="pq sm">Dormir<br>est un<br>entraînement.</div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post pd-img b"><div class="p-cut"></div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post" style="background:#111214;color:#fff"><div class="pq">La discipline<br>bat la<br><span class="o">motivation.</span></div><svg class="trait" width="90" height="5" viewBox="0 0 90 5"><path fill="#FA4616" d="M0 5 L90 0 L88.7 5 Z"/></svg><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post" style="background:#F3F1EC;color:#111214"><div class="p-k">Résultats</div><div class="pkpi">−12<small>kg</small></div><div class="p-s">16 semaines · 3 séances / semaine<br>Témoignage client (exemple)</div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post" style="background:#2A2C30;color:#fff"><div class="p-k">Conseil n°08</div><div class="pq sm">Dormir<br>est un<br>entraînement.</div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post" style="background:#FA4616;color:#111214"><div class="p-k">Nouveau</div><div class="pq">Programme<br>12 semaines</div><div class="p-s">Force · Cardio · Mobilité<br>Démarrage le 4 novembre</div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post pd-img b"><div class="p-cut"></div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div></div></div></div>
+  <div class="posts">
+    <div class="post-row"><div class="post" style="background:#111214;color:#fff"><div class="pq">La discipline<br>bat la<br><span class="o">motivation.</span></div><svg class="trait" width="90" height="5" viewBox="0 0 90 5"><path fill="#FA4616" d="M0 5 L90 0 L88.7 5 Z"/></svg><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post" style="background:#FA4616;color:#111214"><div class="p-k">Nouveau</div><div class="pq">Programme<br>12 semaines</div><div class="p-s">Force · Cardio · Mobilité<br>Démarrage le 4 novembre</div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><div class="post" style="background:#F3F1EC;color:#111214"><div class="p-k">Résultats</div><div class="pkpi">−12<small>kg</small></div><div class="p-s">16 semaines · 3 séances / semaine<br>Témoignage client (exemple)</div><svg class="sym p-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div></div>
+    <div class="post-legend"><span><b>Citation</b> Noir, mot-clé en orange</span><span><b>Annonce</b> Orange, texte noir</span><span><b>Résultat</b> Craie, chiffre en italique</span></div>
+    <ul class="rules small"><li>Symbole toujours en bas à droite, même taille et même marge sur tous les posts.</li>
+    <li>Alterner photo / aplat pour un profil rythmé ; jamais deux aplats orange côte à côte.</li>
+    <li>Formats : 1080 × 1350 (post) et 1080 × 1920 (story).</li></ul>
+    <div class="kicker mt-s">Stories à la une</div>
+    <div class="highlights"><div><span class="hl"><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 18v12M11 13v22M37 13v22M42 18v12M11 24h26"/></svg></span><small>Coaching</small></div><div><span class="hl"><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M5 42h9v-8h9v-8h9v-8h11M34 8h9v9M43 8L28 23"/></svg></span><small>Résultats</small></div><div><span class="hl"><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 11h36v31H6zM6 19h36M15 6v9M33 6v9M17 30l5 5 9-10"/></svg></span><small>Programmes</small></div><div><span class="hl"><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M24 15c-9-6-18 0-17 11 1 10 8 17 17 15 9 2 16-5 17-15 1-11-8-17-17-11zM24 15c0-5 3-8 7-10"/></svg></span><small>Nutrition</small></div><div><span class="hl"><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M8 9h32v23H8zM3 39h42M20 16l9 5-9 5z"/></svg></span><small>En ligne</small></div></div>
+  </div>
+  <div class="story"><div class="pd-img a st-img"></div><div class="st-cut"></div>
+    <div class="st-txt"><div class="kicker orange">Story</div><div class="pq sm light">Séance<br>du jour</div><div class="st-list">5 × 5 Squat<br>4 × 8 Rowing<br>3 × 12 Fentes</div></div>
+    <img src="../logo/svg/jt-symbole-blanc.svg" class="st-logo"></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Réseaux sociaux</span><span class="pn">29</span></div></section><section class="page  " id="p30"><div class="head"><div class="kicker">06 — Applications</div><h2>Textile.</h2><p class="intro">Le textile est le premier support de visibilité d'un coach : il doit se reconnaître de loin, à l'entraînement comme en dehors.</p></div>
+<div class="textile">
+  <div class="tee"><svg viewBox="0 0 300 320"><path d="M95 22 L58 32 L8 78 L44 120 L70 100 L70 304 L230 304 L230 100 L256 120 L292 78 L242 32 L205 22 C192 52 108 52 95 22 Z" fill="#111214"/><path d="M95 22 C108 52 192 52 205 22" fill="none" stroke="#2c2e33" stroke-width="6"/>
+    <g transform="translate(176 92) scale(0.052)"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></g></svg><b>T-shirt — face</b><span>Symbole blanc côté cœur, 8 cm, sérigraphie ou flex.</span></div>
+  <div class="tee"><svg viewBox="0 0 300 320"><path d="M95 22 L58 32 L8 78 L44 120 L70 100 L70 304 L230 304 L230 100 L256 120 L292 78 L242 32 L205 22 C192 52 108 52 95 22 Z" fill="#111214"/><path d="M95 22 C108 52 192 52 205 22" fill="none" stroke="#2c2e33" stroke-width="6"/>
+    <g transform="translate(92 110) scale(0.139)"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></g>
+    <text x="150" y="200" text-anchor="middle" class="tee-t">VISE PLUS HAUT.</text></svg><b>T-shirt — dos</b><span>Symbole Orange Impulsion 25 cm et signature.</span></div>
+  <div class="tee"><svg viewBox="0 0 300 320"><path d="M95 22 L58 32 L8 78 L44 120 L70 100 L70 304 L230 304 L230 100 L256 120 L292 78 L242 32 L205 22 C192 52 108 52 95 22 Z" fill="#F3F1EC" stroke="#d8d4cb" stroke-width="2"/><path d="M95 22 C108 52 192 52 205 22" fill="none" stroke="#d8d4cb" stroke-width="6"/>
+    <g transform="translate(103 115) scale(0.112)"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></g></svg><b>T-shirt clients</b><span>Craie, symbole noir centré : tenue offerte aux élèves.</span></div>
+  <div class="tee"><svg viewBox="0 0 300 320"><path d="M40 210 C40 120 90 78 150 78 C210 78 260 120 260 210 Z" fill="#111214"/>
+    <path d="M40 210 L260 210 C276 210 292 222 296 238 L4 238 C8 222 24 210 40 210 Z" fill="#202226"/><circle cx="150" cy="80" r="6" fill="#202226"/>
+    <g transform="translate(108 140) scale(0.1)"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></g></svg><b>Casquette</b><span>Broderie blanche, version petite taille sous 4 cm.</span></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Textile</span><span class="pn">30</span></div></section><section class="page  " id="p31"><div class="head"><div class="kicker">06 — Applications</div><h2>Accessoires & événementiel.</h2></div>
+<div class="acc">
+  <div class="bottle"><svg viewBox="0 0 120 340"><rect x="36" y="6" width="48" height="34" rx="6" fill="#2A2C30"/>
+    <rect x="20" y="40" width="80" height="292" rx="22" fill="#111214"/><rect x="20" y="300" width="80" height="10" fill="#FA4616"/>
+    <g transform="translate(29 160) scale(0.075)"><path fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></g></svg><b>Gourde</b><span>Inox noir mat, marquage laser blanc.</span></div>
+  <div class="tote"><svg viewBox="0 0 260 320"><path d="M80 90 C80 20 180 20 180 90" fill="none" stroke="#111214" stroke-width="9"/>
+    <rect x="20" y="88" width="220" height="226" fill="#F3F1EC" stroke="#d8d4cb" stroke-width="2"/>
+    <g transform="translate(53 150) scale(0.18)"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></g>
+    <text x="130" y="262" text-anchor="middle" class="tee-t" style="fill:#111214">VISE PLUS HAUT.</text></svg><b>Tote bag</b><span>Coton naturel, sérigraphie noire 1 couleur.</span></div>
+  <div class="towel"><svg viewBox="0 0 220 320"><rect x="20" y="10" width="180" height="300" fill="#FA4616"/>
+    <rect x="20" y="268" width="180" height="16" fill="#111214"/>
+    <g transform="translate(66 220) scale(0.105)"><path fill="#111214" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></g></svg><b>Serviette</b><span>Microfibre orange, broderie noire.</span></div>
+  <div class="rollup"><div class="ru-tile"><div class="ru"><svg width="130" height="330" viewBox="0 0 130 330" preserveAspectRatio="xMidYMid slice"><defs><pattern id="ru" width="81.0" height="21.6" patternUnits="userSpaceOnUse"><path d="M0 6.3 L54.0 -8.1 L50.4 0.9 Z" fill="#fff"/><path d="M40.5 17.1 L94.5 2.7 L90.9 11.7 Z" fill="#fff"/><path d="M-40.5 17.1 L13.5 2.7 L9.9 11.7 Z" fill="#fff"/><path d="M81.0 6.3 L135.0 -8.1 L131.4 0.9 Z" fill="#fff"/></pattern></defs><rect width="100%" height="100%" fill="#111214"/><rect width="100%" height="100%" fill="url(#ru)" opacity="0.1"/></svg>
+    <div class="ru-in"><svg class="sym ru-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg><img src="../logo/svg/jt-logotype-blanc.svg"><div class="ru-t">Coaching<br>individuel<br>&amp; collectif</div><svg class="trait" width="80" height="4" viewBox="0 0 80 4"><path fill="#FA4616" d="M0 4 L80 0 L78.8 4 Z"/></svg><div class="ru-b">Bilan offert</div></div></div></div>
+    <b>Roll-up 85 × 200 cm</b><span>Salons, salles partenaires, événements.</span></div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Accessoires</span><span class="pn">31</span></div></section><section class="page  " id="p32"><div class="head"><div class="kicker">06 — Applications</div><h2>Web.</h2></div>
+<div class="web">
+  <div class="browser"><div class="br-bar"><i></i><i></i><i></i><span>jonathantemam.fr</span></div>
+    <div class="site">
+      <div class="site-pattern"><svg width="820" height="470" viewBox="0 0 820 470" preserveAspectRatio="xMidYMid slice"><defs><pattern id="sp" width="144.0" height="38.4" patternUnits="userSpaceOnUse"><path d="M0 11.2 L96.0 -14.4 L89.6 1.6 Z" fill="#fff"/><path d="M72.0 30.4 L168.0 4.8 L161.6 20.8 Z" fill="#fff"/><path d="M-72.0 30.4 L24.0 4.8 L17.6 20.8 Z" fill="#fff"/><path d="M144.0 11.2 L240.0 -14.4 L233.6 1.6 Z" fill="#fff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#sp)" opacity="0.06"/></svg></div>
+      <div class="nav"><img src="../logo/svg/jt-horizontal-blanc.svg"><div class="nav-l"><span>Coaching</span><span>Programmes</span><span>Résultats</span><span>Contact</span></div><span class="btn">Réserver</span></div>
+      <div class="hero"><div class="kicker orange">Coach sportif · Paris &amp; en ligne</div>
+        <div class="h-big">Vise<br>plus haut.</div>
+        <p>Coaching individuel, small group et préparation physique. Un plan clair, un suivi chaque semaine.</p>
+        <span class="btn big">Réserver mon bilan offert</span></div>
+      <svg class="sym site-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>
+      <div class="site-strip"><div><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 18v12M11 13v22M37 13v22M42 18v12M11 24h26"/></svg><span>Force</span></div><div><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 27h10l4-11 6 21 5-15 3 5h12"/></svg><span>Cardio</span></div><div><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M24 15c-9-6-18 0-17 11 1 10 8 17 17 15 9 2 16-5 17-15 1-11-8-17-17-11zM24 15c0-5 3-8 7-10"/></svg><span>Nutrition</span></div><div><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#FA4616" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M8 9h32v23H8zM3 39h42M20 16l9 5-9 5z"/></svg><span>Visio</span></div></div>
+    </div></div>
+  <div class="mobile"><div class="m-screen"><div class="m-nav"><img src="../logo/svg/jt-symbole-blanc.svg"><span>☰</span></div>
+    <div class="kicker orange sm">Programme</div><div class="m-h">12 semaines<br>pour changer<br>de niveau.</div><svg class="trait" width="80" height="4" viewBox="0 0 80 4"><path fill="#FA4616" d="M0 4 L80 0 L78.8 4 Z"/></svg>
+    <div class="m-card"><b>−12<small> kg</small></b><span>en moyenne sur 16 semaines*</span></div>
+    <span class="btn">Commencer</span></div>
+    <div class="app-icons"><img src="../logo/web/apple-touch-icon.png"><img src="../logo/web/favicon-48.png" class="fav"><img src="../logo/web/favicon-32.png" class="fav s"></div></div>
+</div>
+<p class="foot-note">Boutons Orange Impulsion avec texte Noir Carbone · fond de site Noir Carbone · favicon et icônes d'application fournis (dossier logo/web). *Chiffres d'illustration.</p><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Web</span><span class="pn">32</span></div></section><section class="page  " id="p33"><div class="head"><div class="kicker">06 — Applications</div><h2>Motion — l'animation du logo.</h2><p class="intro">Pour les vidéos, reels et l'ouverture du site. 1,6 seconde, du trait à la signature.</p></div>
+<div class="motion">
+  <div class="mf"><div class="mf-art"><svg viewBox="-60 -60 957 532"><defs><clipPath id="cb594232"><rect x="577" y="-50" width="270" height="520"/></clipPath><clipPath id="cj594232"><rect x="-10" y="-10" width="0" height="520"/></clipPath></defs><path clip-path="url(#cb594232)" fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z"/><path clip-path="url(#cj594232)" fill="#FA4616" d="M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><b>0,0 s</b><span>La pointe entre par la droite et trace la barre.</span></div>
+  <div class="mf"><div class="mf-art"><svg viewBox="-60 -60 957 532"><defs><clipPath id="cb45347"><rect x="0" y="-50" width="847" height="520"/></clipPath><clipPath id="cj45347"><rect x="-10" y="-10" width="0" height="520"/></clipPath></defs><path clip-path="url(#cb45347)" fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z"/><path clip-path="url(#cj45347)" fill="#FA4616" d="M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><b>0,4 s</b><span>La lame descend : le T est formé.</span></div>
+  <div class="mf"><div class="mf-art"><svg viewBox="-60 -60 957 532"><defs><clipPath id="cb887725"><rect x="0" y="-50" width="847" height="520"/></clipPath><clipPath id="cj887725"><rect x="-10" y="-10" width="560" height="520"/></clipPath></defs><path clip-path="url(#cb887725)" fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z"/><path clip-path="url(#cj887725)" fill="#FA4616" d="M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg></div><b>0,8 s</b><span>Le J glisse en contre-mouvement, en orange.</span></div>
+  <div class="mf"><div class="mf-art"><svg viewBox="-60 -60 957 532"><defs><clipPath id="cb907121"><rect x="0" y="-50" width="847" height="520"/></clipPath><clipPath id="cj907121"><rect x="-10" y="-10" width="1000" height="520"/></clipPath></defs><path clip-path="url(#cb907121)" fill="#fff" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z"/><path clip-path="url(#cj907121)" fill="#fff" d="M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg><img src="../logo/svg/jt-logotype-blanc.svg" class="mf-wm"></div><b>1,6 s</b><span>Tout se fige en blanc, le nom apparaît.</span></div>
+</div>
+<ul class="rules small two"><li>Courbe d'accélération « expo-out » : départ rapide, arrivée douce — l'élan, pas le rebond.</li>
+<li>Toujours terminer sur le logo statique exact. Pas de rotation, pas de rebond, pas d'effet 3D.</li>
+<li>Son (optionnel) : un « whoosh » court et sec, synchronisé sur la lame à 0,4 s.</li>
+<li>Livrable conseillé : MP4 / MOV avec transparence et fichier Lottie pour le web.</li></ul><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Motion</span><span class="pn">33</span></div></section><section class="page divider dark" id="p34">
+<div class="div-pattern"><svg width="1123" height="794" viewBox="0 0 1123 794" preserveAspectRatio="xMidYMid slice"><defs><pattern id="dp07" width="180.0" height="48.0" patternUnits="userSpaceOnUse"><path d="M0 14.0 L120.0 -18.0 L112.0 2.0 Z" fill="#ffffff"/><path d="M90.0 38.0 L210.0 6.0 L202.0 26.0 Z" fill="#ffffff"/><path d="M-90.0 38.0 L30.0 6.0 L22.0 26.0 Z" fill="#ffffff"/><path d="M180.0 14.0 L300.0 -18.0 L292.0 2.0 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#dp07)" opacity="0.05"/></svg></div>
+<div class="div-num">07</div>
+<div class="div-body"><h1>Fichiers<br>&amp; contacts</h1><p>Le bon fichier, au bon endroit.</p><ul><li>Arborescence des livrables</li><li>Quel format pour quel usage</li></ul></div>
+<svg class="sym div-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="#FA4616" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>
+<div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span></span><span class="pn">34</span></div></section><section class="page  " id="p35"><div class="head"><div class="kicker">07 — Fichiers & contacts</div><h2>Les fichiers livrés.</h2></div>
+<div class="two-col files">
+  <pre class="tree">jonathan-temam/
+├─ Jonathan-Temam_Charte-graphique.pdf
+├─ logo/
+│  ├─ svg/   masters vectoriels
+│  │  ├─ jt-horizontal-{noir|blanc|accent-clair|accent-sombre}.svg
+│  │  ├─ jt-vertical-{…}.svg
+│  │  ├─ jt-logotype-{…}.svg
+│  │  ├─ jt-symbole-{noir|blanc|orange|…}.svg
+│  │  ├─ jt-symbole-petite-taille.svg
+│  │  └─ jt-avatar-{noir|orange}.svg
+│  ├─ png/   mêmes fichiers, fond transparent
+│  └─ web/   favicon.ico, favicon.svg, icônes
+│            192/512, apple-touch, webmanifest
+├─ presentation/   planche de présentation
+└─ source/   polices (OFL), scripts de génération</pre>
+  <div>
+    <table class="spec">
+      <tr><th>Usage</th><th>Format</th></tr>
+      <tr><td>Site, réseaux, Canva, présentations</td><td>SVG ou PNG</td></tr>
+      <tr><td>Imprimeur, sérigraphie, broderie</td><td>SVG (vectoriel) + codes CMJN / Pantone</td></tr>
+      <tr><td>Photo de profil</td><td>jt-avatar-noir.png</td></tr>
+      <tr><td>Navigateur, smartphone</td><td>dossier web/</td></tr>
+      <tr><td>Fond sombre</td><td>versions « blanc » ou « accent-sombre »</td></tr>
+    </table>
+    <div class="kicker mt-s">Nomenclature</div>
+    <p class="note"><code>jt-[version]-[couleur].[format]</code> — ex. <code>jt-vertical-blanc.png</code>.
+    Les PNG sont exportés à 2400 px de large ; pour une impression grand format, utilisez toujours le SVG.</p>
+    <div class="contact"><div class="kicker">Contact marque</div><b>Jonathan Temam</b><span>contact@jonathantemam.fr · +33 6 00 00 00 00</span>
+    <span class="cap-s">Coordonnées à confirmer avant impression.</span></div>
+  </div>
+</div><div class="pfoot"><span><svg class="sym pf-sym" style="" viewBox="0 0 837 412" aria-hidden="true"><path fill="currentColor" d="M837 0 L0 228 L641 103.4 L558.6 163.3 L485 321 Z M492 176 L293 214.7 L409 228 L372.2 307 L141 412 L405.9 360.5 Z"/></svg>Jonathan Temam — Charte graphique</span><span>Fichiers</span><span class="pn">35</span></div></section><section class="page cover dark" id="p36"><div class="cover-pattern"><svg width="1123" height="794" viewBox="0 0 1123 794" preserveAspectRatio="xMidYMid slice"><defs><pattern id="bp" width="180.0" height="48.0" patternUnits="userSpaceOnUse"><path d="M0 14.0 L120.0 -18.0 L112.0 2.0 Z" fill="#ffffff"/><path d="M90.0 38.0 L210.0 6.0 L202.0 26.0 Z" fill="#ffffff"/><path d="M-90.0 38.0 L30.0 6.0 L22.0 26.0 Z" fill="#ffffff"/><path d="M180.0 14.0 L300.0 -18.0 L292.0 2.0 Z" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="none"/><rect width="100%" height="100%" fill="url(#bp)" opacity="0.045"/></svg></div>
+<div class="back"><img src="../logo/svg/jt-vertical-accent-sombre.svg"><div class="signature light">Vise plus haut.</div></div></section></body></html>
