@@ -674,24 +674,26 @@ page(f'''{head('07 — Fichiers & contacts', 'Les fichiers livrés.')}
 <div class="two-col files">
   <pre class="tree">jonathan-temam/
 ├─ Jonathan-Temam_Charte-graphique.pdf
+├─ Jonathan-Temam_Charte-graphique.pptx  modifiable
+├─ Jonathan-Temam_Logos-vectoriels.zip
+├─ polices/   Archivo Expanded + Inter (.ttf)
 ├─ logo/
-│  ├─ svg/   masters vectoriels
-│  │  ├─ jt-horizontal-{{noir|blanc|accent-clair|accent-sombre}}.svg
-│  │  ├─ jt-vertical-{{…}}.svg
-│  │  ├─ jt-logotype-{{…}}.svg
-│  │  ├─ jt-symbole-{{noir|blanc|orange|…}}.svg
-│  │  ├─ jt-symbole-petite-taille.svg
-│  │  └─ jt-avatar-{{noir|orange}}.svg
+│  ├─ svg/ pdf/ eps/   masters vectoriels
+│  │  ├─ jt-horizontal-{{noir|blanc|accent-…}}
+│  │  ├─ jt-vertical-{{…}} · jt-logotype-{{…}}
+│  │  ├─ jt-symbole-{{noir|blanc|orange|…}}
+│  │  ├─ jt-symbole-petite-taille
+│  │  └─ jt-avatar-{{noir|orange}}
 │  ├─ png/   mêmes fichiers, fond transparent
-│  └─ web/   favicon.ico, favicon.svg, icônes
-│            192/512, apple-touch, webmanifest
+│  └─ web/   favicon, icônes, webmanifest
 ├─ presentation/   planche de présentation
-└─ source/   polices (OFL), scripts de génération</pre>
+└─ source/   scripts de génération</pre>
   <div>
     <table class="spec">
       <tr><th>Usage</th><th>Format</th></tr>
-      <tr><td>Site, réseaux, Canva, présentations</td><td>SVG ou PNG</td></tr>
-      <tr><td>Imprimeur, sérigraphie, broderie</td><td>SVG (vectoriel) + codes CMJN / Pantone</td></tr>
+      <tr><td>Web, réseaux, Canva</td><td>SVG ou PNG</td></tr>
+      <tr><td>Imprimeur, sérigraphie, broderie</td><td>PDF / EPS / SVG + codes CMJN / Pantone</td></tr>
+      <tr><td>Modifier cette charte</td><td>.pptx + polices installées</td></tr>
       <tr><td>Photo de profil</td><td>jt-avatar-noir.png</td></tr>
       <tr><td>Navigateur, smartphone</td><td>dossier web/</td></tr>
       <tr><td>Fond sombre</td><td>versions « blanc » ou « accent-sombre »</td></tr>

@@ -485,3 +485,6 @@ table { border-collapse: collapse; width: 100%; }
 .alpha { font-size: 23px; }
 .sample-line { font-size: 54px; white-space: nowrap; }
 .sample-line span { font-size: 26px; }
+
+/* inline code without a tinted box: keeps the editable PowerPoint text aligned with the page */
+code { background: none; padding: 0; color: var(--noir); font-weight: 600; }

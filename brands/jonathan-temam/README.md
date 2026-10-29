@@ -7,6 +7,8 @@ Branding complet du coach sportif Jonathan Temam, construit à partir de son mon
 | Fichier | Contenu |
 |---|---|
 | `Jonathan-Temam_Charte-graphique.pdf` | Charte graphique de 36 pages (A4 paysage) : plateforme de marque, logo, couleurs, typographie, éléments graphiques, applications, motion, fichiers |
+| `Jonathan-Temam_Charte-graphique.pptx` | La même charte, modifiable dans PowerPoint, Keynote, Google Slides ou Canva (import) : chaque texte est une zone de texte éditable, les logos sont des images déplaçables, les visuels sont en arrière-plan de chaque page |
+| `polices/` | Archivo Expanded et Inter en .ttf, à installer avant d'ouvrir le .pptx (licence SIL OFL, gratuites) |
 | `logo/svg/` | Masters vectoriels : horizontal, vertical, logotype, symbole, symbole petite taille et avatars, en noir, blanc et deux versions accent, plus `-noir-pur` (#000000) pour la gravure et la broderie |
 | `logo/pdf/`, `logo/eps/` | Les mêmes variantes en vectoriel pour imprimeurs, brodeurs et graveurs (texte vectorisé, aucune image intégrée) |
 | `Jonathan-Temam_Logos-vectoriels.zip` | Toutes les variantes en SVG, PDF et EPS dans un seul fichier |
@@ -30,10 +32,13 @@ cd source
 python3 build_logos.py                                  # logo/svg/*
 python3 build_charte.py                                 # charte.html
 NODE_PATH=$(npm root -g) node render_charte.js          # PDF + aperçus (Playwright/Chromium)
+node extract_charte.js /tmp/x && node build_pptx.js /tmp/x   # version PowerPoint modifiable (pptxgenjs, sharp)
 ```
 Il faut `fonttools` et `brotli` pour `build_logos.py`, et `cairosvg` pour les PNG.
 
 ## Notes de passation
+
+- **PowerPoint** : installez d'abord les polices du dossier `polices/`, sinon PowerPoint les remplace et les textes se décalent. Le .pptx est généré depuis la charte HTML ; pour changer un visuel (aplat, maquette), modifiez l'image d'arrière-plan ou reconstruisez depuis `source/`.
 
 - **Vectorisation** : le symbole a été reconstruit à partir d'une photo d'écran, après correction de la perspective. Il a ensuite été superposé au tracé d'origine pour vérification. Si le fichier vectoriel original existe (Affinity ou Canva), comparez-le aux masters avant l'impression.
 - **Tests effectués** : `svg_audit.py` (score 92/100). Le seul avertissement concerne l'arête extérieure à 42°, signalée comme proche de 45°. Elle est conservée pour rester fidèle au dessin du client. Le symbole a aussi été testé en 16, 32 et 48 px. En dessous de 32 px, utilisez `jt-symbole-petite-taille`, dont les pointes sont raccourcies et épaissies.
