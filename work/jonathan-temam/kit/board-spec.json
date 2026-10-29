@@ -1,0 +1,58 @@
+{
+  "brand": "Jonathan Temam",
+  "tagline": "Coach sportif",
+  "brief": "Le logo d'un coach sportif indépendant. Il doit être dynamique et intégrer les initiales J et T (J d'abord), fondues dans une forme stylisée plutôt que lisibles immédiatement.",
+  "adjectives": [
+    "dynamique",
+    "énergique",
+    "précis",
+    "motivant"
+  ],
+  "criteria": "Réussi si : on ressent l'élan avant de lire les lettres, lisible à 16 px, fonctionne en une couleur et en négatif, se distingue des haltères, éclairs et silhouettes du secteur.",
+  "mockups": [
+    "tshirt",
+    "social",
+    "app-icon",
+    "business-card",
+    "signage",
+    "tote"
+  ],
+  "nav": [
+    "Coaching",
+    "Programmes",
+    "Contact"
+  ],
+  "brand_color": "#FA4616",
+  "tile_color": "#101820",
+  "greyscale": false,
+  "final": true,
+  "designer": "Claude · logo-design skill",
+  "concepts": [
+    {
+      "name": "Lame",
+      "symbol": "masters/jt-symbol-color.svg",
+      "lockup": "masters/jt-horizontal-color.svg",
+      "stacked": "masters/jt-stacked-color.svg",
+      "avatar": "masters/jt-badge-color.svg",
+      "symbol_on_tile": "masters/jt-symbol-color.svg",
+      "stacked_on_tile": "masters/jt-stacked-reversed.svg",
+      "symbol_on_dark": "masters/jt-symbol-color.svg",
+      "lockup_on_dark": "masters/jt-horizontal-reversed.svg",
+      "stacked_on_dark": "masters/jt-stacked-reversed.svg",
+      "idea": "Le haut du J s'arrondit pour devenir une seule lame qui forme la barre du T ; le crochet du J s'effile comme une traînée de vitesse.",
+      "rationale": [
+        "J puis T, fondus en un seul signe : on ressent l'élan avant de lire les lettres",
+        "Inclinaison de 15° et pointes à 45° : un départ de sprint, sans haltère ni éclair",
+        "Orange Élan sur Noir Carbone : énergie, contraste, reconnaissable sur un maillot comme à 16 px"
+      ]
+    }
+  ],
+  "recommendation": "Lame : logo principal en version horizontale ; écusson pour les réseaux sociaux et le textile ; version petite taille pour le favicon et l'icône d'application.",
+  "next_steps": [
+    "Vérifier la disponibilité de la marque (INPI / EUIPO)",
+    "Imprimer un test textile (flocage / broderie) de l'écusson",
+    "Décliner les gabarits réseaux sociaux"
+  ],
+  "deck_title": "identité finale",
+  "label": "Logo final"
+}
