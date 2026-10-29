@@ -7,7 +7,9 @@ Branding complet du coach sportif Jonathan Temam, construit à partir de son mon
 | Fichier | Contenu |
 |---|---|
 | `Jonathan-Temam_Charte-graphique.pdf` | Charte graphique de 36 pages (A4 paysage) : plateforme de marque, logo, couleurs, typographie, éléments graphiques, applications, motion, fichiers |
-| `logo/svg/` | Masters vectoriels : horizontal, vertical, logotype, symbole, symbole petite taille et avatars, en noir, blanc et deux versions accent |
+| `logo/svg/` | Masters vectoriels : horizontal, vertical, logotype, symbole, symbole petite taille et avatars, en noir, blanc et deux versions accent, plus `-noir-pur` (#000000) pour la gravure et la broderie |
+| `logo/pdf/`, `logo/eps/` | Les mêmes variantes en vectoriel pour imprimeurs, brodeurs et graveurs (texte vectorisé, aucune image intégrée) |
+| `Jonathan-Temam_Logos-vectoriels.zip` | Toutes les variantes en SVG, PDF et EPS dans un seul fichier |
 | `logo/png/` | Les mêmes fichiers en PNG transparents (2400 px de large, avatars en 1024 px) |
 | `logo/web/` | `favicon.ico`, `favicon.svg`, icônes 16/32/48/192/512, apple-touch, maskable, `site.webmanifest`, `head-snippet.html` |
 | `presentation/` | Planche de présentation client (HTML + 5 slides PNG) générée par `presentation_board.py` |
